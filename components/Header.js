@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Menu, X, Mail, Phone } from "lucide-react"; // Añadimos Phone aquí
 
 // Font Awesome - Marcas
@@ -25,7 +26,7 @@ export default function Header() {
         
         {/* Contenedor del Logo */}
         <div className="flex items-center shrink-0 w-[230px] h-[66px] md:w-[300px] md:h-[86px] relative">
-          <a href="#inicio" onClick={closeMenu} className="w-full h-full block relative">
+          <Link href="/" onClick={closeMenu} className="w-full h-full block relative">
             <Image 
               src="/logo-b.png" 
               alt="Vital Salud Logo" 
@@ -33,17 +34,21 @@ export default function Header() {
               className="object-contain" 
               priority 
             />
-          </a>
+          </Link>
         </div>
         
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-10 font-semibold text-base text-slate-800">
-          <a href="#nosotros" className="relative py-2 transition-colors hover:text-[#434bb2] group">
-            Quiénes Somos
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#434bb2] transition-all duration-300 group-hover:w-full"></span>
-          </a>
           <a href="#servicios" className="relative py-2 transition-colors hover:text-[#434bb2] group">
             Servicios
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#434bb2] transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="#especialistas" className="relative py-2 transition-colors hover:text-[#434bb2] group">
+            Especialistas
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#434bb2] transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="#diferencial" className="relative py-2 transition-colors hover:text-[#434bb2] group">
+            Soluciones
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#434bb2] transition-all duration-300 group-hover:w-full"></span>
           </a>
           <a href="#contacto" className="relative py-2 transition-colors hover:text-[#434bb2] group">
@@ -61,12 +66,12 @@ export default function Header() {
             <Phone className="h-5 w-5 text-[#434bb2] stroke-[2.5]" />
             <span>+1 (555) 019-9234</span>
           </a>
-          <a 
-            href="#contacto" 
+          <Link 
+            href="/citas" 
             className="bg-[#7aaf43] hover:bg-[#434bb2] text-white px-6 py-3 rounded-xl font-bold transition-all shadow-md hover:shadow-lg shadow-[#7aaf43]/15 text-sm uppercase tracking-wider"
           >
             Agendar Cita
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -83,11 +88,14 @@ export default function Header() {
       {isOpen && (
         <div className="md:hidden border-b border-slate-100 bg-white absolute top-[84px] left-0 w-full shadow-xl z-50 animate-in fade-in duration-150">
           <nav className="flex flex-col p-6 space-y-4 font-bold text-lg text-slate-800">
-            <a href="#nosotros" onClick={closeMenu} className="hover:text-[#434bb2] hover:bg-slate-50 p-3 rounded-xl transition-all">
-              Quiénes Somos
-            </a>
             <a href="#servicios" onClick={closeMenu} className="hover:text-[#434bb2] hover:bg-slate-50 p-3 rounded-xl transition-all">
               Servicios
+            </a>
+            <a href="#especialistas" onClick={closeMenu} className="hover:text-[#434bb2] hover:bg-slate-50 p-3 rounded-xl transition-all">
+              Especialistas
+            </a>
+            <a href="#diferencial" onClick={closeMenu} className="hover:text-[#434bb2] hover:bg-slate-50 p-3 rounded-xl transition-all">
+              Soluciones
             </a>
             <a href="#contacto" onClick={closeMenu} className="hover:text-[#434bb2] hover:bg-slate-50 p-3 rounded-xl transition-all">
               Contacto
@@ -105,13 +113,13 @@ export default function Header() {
               </a>
 
               {/* Botón de Cita Móvil */}
-              <a 
-                href="#contacto" 
+              <Link 
+                href="/citas" 
                 onClick={closeMenu} 
                 className="block text-center bg-[#7aaf43] hover:bg-[#434bb2] text-white px-5 py-3.5 rounded-xl font-bold transition-all text-sm uppercase tracking-wider shadow-md shadow-[#7aaf43]/10"
               >
                 Agendar Cita
-              </a>
+              </Link>
 
               {/* SECCIÓN DE REDES SOCIALES */}
               <div className="flex items-center justify-center gap-6 pt-5 border-t border-slate-100">

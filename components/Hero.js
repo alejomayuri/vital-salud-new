@@ -51,7 +51,7 @@ export default function Hero() {
             </a>
             <a 
               href="#contacto" 
-              className="inline-flex items-center justify-center bg-white hover:bg-slate-50 text-slate-800 border border-slate-200 px-7 py-4 rounded-xl font-bold transition-colors text-sm uppercase tracking-wider text-center"
+              className="inline-flex items-center justify-center bg-white hover:bg-slate-50 text-slate-800 border border-[#434bb2] px-7 py-4 rounded-xl font-bold transition-colors text-sm uppercase tracking-wider text-center"
             >
               Contactar Ahora
             </a>

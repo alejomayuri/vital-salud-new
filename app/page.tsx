@@ -1,5 +1,6 @@
 import React from 'react';
-import { Heart, Phone, Mail, MapPin, CheckCircle, Menu, X, ArrowRight } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
 import Hero from '@/components/Hero';
 import QuienesSomos from '@/components/QuienesSomos';
 import Servicios from '@/components/Servicios';
@@ -21,17 +22,17 @@ export default function HomePage() {
       
       {/* 6. FOOTER */}
       <footer className="bg-slate-900 text-slate-400 border-t border-slate-800 py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-          <div className="space-y-4">
-            <div className="flex items-center gap-2 text-white">
-              <div className="bg-teal-600 p-1.5 rounded-lg">
-                <Heart className="h-5 w-5" fill="currentColor" />
-              </div>
-              <span className="text-xl font-bold tracking-tight">VitalSalud</span>
-            </div>
-            <p className="text-sm leading-relaxed text-slate-400">
-              Cuidando de ti y de los tuyos con la excelencia médica que nos caracteriza.
-            </p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="space-y-4 flex justify-center items-center">
+              <Link href="/" className="w-[300px] h-[100px] relative">
+                <Image 
+                  src="/logo-w.png" 
+                  alt="Vital Salud Logo" 
+                  fill
+                  className="object-contain" 
+                  priority 
+                />
+              </Link>
           </div>
           
           <div>
@@ -40,6 +41,8 @@ export default function HomePage() {
               <li><a href="#inicio" className="hover:text-white transition-colors">Inicio</a></li>
               <li><a href="#nosotros" className="hover:text-white transition-colors">Quiénes Somos</a></li>
               <li><a href="#servicios" className="hover:text-white transition-colors">Servicios</a></li>
+              <li><a href="#especialistas" className="hover:text-white transition-colors">Especialistas</a></li>
+              <li><a href="#diferencial" className="hover:text-white transition-colors">Planes Diferenciales</a></li>
               <li><a href="#contacto" className="hover:text-white transition-colors">Contacto</a></li>
             </ul>
           </div>
