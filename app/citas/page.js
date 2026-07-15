@@ -4,14 +4,30 @@ import { ArrowLeft, Calendar, Shield, Clock, User, FileText, CheckCircle2 } from
 
 // Listados para alimentar los selects del formulario corporativo
 const DOCTORES = [
-  { id: 'juan-perez', nombre: 'Dr. Juan Pérez (Cardiología)' },
-  { id: 'ana-martinez', nombre: 'Dra. Ana Martínez (Pediatría)' }
+  { id: 'carla-garcia', nombre: 'Dra. Carla Pierina Garcia Torres' },
+  { id: 'fernando-sanchez', nombre: 'Dr. Fernando José Sanchez Sevillano' },
+  { id: 'grisnery-manquera', nombre: 'Dra. Grisnery Guadalupe Manquera Torres' },
+  { id: 'luis-alvarez', nombre: 'Dr. Luis Miguel Alvarez Barreda' },
+  { id: 'magaly-suarez', nombre: 'Dra. Magaly Mirtha Suarez Acevedo' },
+  { id: 'maria-hinojosa', nombre: 'Dra. María Fernanda Hinojosa Ugarte' },
+  { id: 'francisco-dominguez', nombre: 'Dr. Francisco Javier Dominguez Jaime' },
+  { id: 'greta-tinajeros', nombre: 'Dra. Greta Francesca Tinajeros Sanchez' }
 ];
 
 const SERVICIOS = [
+  { id: 'laboratorio-de-patologia', nombre: 'Laboratorio de Patología' },
+  { id: 'biopsias', nombre: 'Biopsias' },
+  { id: 'examenes-de-laboratorio-clinico', nombre: 'Exámenes de Laboratorio Clínico' },
+  { id: 'chequeos-preventivos', nombre: 'Chequeos Preventivos' },
   { id: 'medicina-general', nombre: 'Medicina General' },
-  { id: 'pediatria', nombre: 'Pediatría y Neonatología' },
-  { id: 'cardiologia', nombre: 'Cardiología Clínica' }
+  { id: 'ginecologia', nombre: 'Ginecología' },
+  { id: 'cardiologia', nombre: 'Cardiología' },
+  { id: 'gastroenterologia', nombre: 'Gastroenterología' },
+  { id: 'test-de-aliento', nombre: 'Test de Aliento' },
+  { id: 'imagenes-medicas', nombre: 'Imágenes Médicas' },
+  { id: 'inmunologia-y-alergia', nombre: 'Inmunología y Alergia' },
+  { id: 'oncologia', nombre: 'Oncología' },
+  { id: 'vitaminas-y-suplementacion', nombre: 'Vitaminas y Suplementación' },
 ];
 
 export default async function PaginaCitasExtendida({ searchParams }) {

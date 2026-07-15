@@ -7,72 +7,59 @@ import { ArrowRight } from "lucide-react";
 const medicos = [
   {
     id: "1",
-    name: "Dr. Alejandro Mendoza",
-    specialty: "Cardiología Avanzada",
+    name: "Dra. Carla Pierina Garcia Torres",
+    specialty: "Inmunología y Alergia",
     image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80",
-    slug: "/especialistas/alejandro-mendoza"
+    slug: "/dr/carla-garcia"
   },
   {
     id: "2",
-    name: "Dra. Elena Rostova",
-    specialty: "Pediatría Integral",
+    name: "Dr. Fernando José Sanchez Sevillano",
+    specialty: "Radiología",
     image: "https://images.unsplash.com/photo-1594824813573-246434e3b96f?auto=format&fit=crop&w=600&q=80",
-    slug: "/especialistas/elena-rostova"
+    slug: "/dr/fernando-sanchez"
   },
   {
     id: "3",
-    name: "Dr. Carlos Benítez",
-    specialty: "Medicina General",
+    name: "Dra. Grisnery Guadalupe Manquera Torres",
+    specialty: "Anatomía patológica",
     image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=600&q=80",
-    slug: "/especialistas/carlos-benitez"
+    slug: "/dr/grisnery-manquera"
   },
   {
     id: "4",
-    name: "Dra. Sofía Castro",
-    specialty: "Ginecología y Obstetricia",
+    name: "Dr. Luis Miguel Alvarez Barreda",
+    specialty: "Gastroenterología",
     image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=80",
-    slug: "/especialistas/sofia-castro"
+    slug: "/dr/luis-alvarez"
   },
   {
     id: "5",
-    name: "Dr. Alejandro Mendoza",
-    specialty: "Cardiología Avanzada",
+    name: "Dra. Magaly Mirtha Suarez Acevedo",
+    specialty: "Ginecología y Obstetricia",
     image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80",
-    slug: "/especialistas/alejandro-mendoza"
+    slug: "/dr/magaly-suarez"
   },
   {
     id: "6",
-    name: "Dra. Elena Rostova",
-    specialty: "Pediatría Integral",
+    name: "Dra. María Fernanda Hinojosa Ugarte",
+    specialty: "Cardiología",
     image: "https://images.unsplash.com/photo-1594824813573-246434e3b96f?auto=format&fit=crop&w=600&q=80",
-    slug: "/especialistas/elena-rostova"
+    slug: "/dr/maria-hinojosa"
   },
   {
     id: "7",
-    name: "Dr. Carlos Benítez",
-    specialty: "Medicina General",
+    name: "Dr. Francisco Javier Dominguez Jaime",
+    specialty: "Medicina energética",
     image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=600&q=80",
-    slug: "/especialistas/carlos-benitez"
+    slug: "/dr/francisco-dominguez"
   },
   {
     id: "8",
-    name: "Dra. Sofía Castro",
-    specialty: "Ginecología y Obstetricia",
+    name: "Dra. Greta Francesca Tinajeros Sanchez",
+    specialty: "Exámenes de Lab. clínico",
     image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=80",
-    slug: "/especialistas/sofia-castro"
-  },{
-    id: "9",
-    name: "Dr. Alejandro Mendoza",
-    specialty: "Cardiología Avanzada",
-    image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80",
-    slug: "/especialistas/alejandro-mendoza"
-  },
-  {
-    id: "10",
-    name: "Dra. Elena Rostova",
-    specialty: "Pediatría Integral",
-    image: "https://images.unsplash.com/photo-1594824813573-246434e3b96f?auto=format&fit=crop&w=600&q=80",
-    slug: "/especialistas/elena-rostova"
+    slug: "/dr/greta-tinajeros"
   }
 ];
 
@@ -99,7 +86,7 @@ export default function Especialistas() {
         </div>
 
         {/* Grid de Médicos */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {medicos.map((medico) => (
             <Link 
               href={medico.slug} 

@@ -43,7 +43,7 @@ export default function QuienesSomos() {
             </h3>
             
             <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
-              Somos un centro médico especializado en medicina preventiva y diagnóstica, te brindamos un tratamiento oportuno con médicos especialistas y tecnología de vanguardia, con la seguridad, calidad y confianza que necesitas en el cuidado de tu salud.
+              Somos un centro médico especializado en medicina preventiva y diagnóstica, comprometido con la detección temprana y el cuidado integral de tu salud. Nuestra atención se fundamenta en los más altos estándares de seguridad, calidad y confianza, para que tú y tu familia reciban el cuidado que merecen.
             </p>
             
             {/* Listado con iconos actualizados */}

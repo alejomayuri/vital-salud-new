@@ -4,8 +4,8 @@ import { ArrowLeft, Calendar, Award, CheckCircle2, Shield, Heart } from 'lucide-
 
 // Simulación de la base de datos de especialistas
 const DOCTORES_DATA = {
-  'juan-perez': {
-    nombre: 'Dr. Juan Pérez',
+  'carla-garcia': {
+    nombre: 'Dra. Carla Pierina Garcia Torres',
     especialidad: 'Cardiología Clínica',
     imagen: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=600',
     cmp: 'CMP 45678',
@@ -22,10 +22,11 @@ const DOCTORES_DATA = {
       'Monitoreo de presión (Holter)',
       'Evaluación de riesgo quirúrgico'
     ],
-    horarios: 'Lun a Vie: 9:00 am - 1:00 pm | Sáb: 9:00 am - 12:00 pm'
+    horarios: 'Lun a Vie: 9:00 am - 1:00 pm | Sáb: 9:00 am - 12:00 pm',
+    slug: 'carla-garcia'
   },
-  'ana-martinez': {
-    nombre: 'Dra. Ana Martínez',
+  'fernando-sanchez': {
+    nombre: 'Dr. Fernando José Sanchez Sevillano',
     especialidad: 'Pediatría y Neonatología',
     imagen: 'https://images.unsplash.com/photo-1594824813573-246434e33963?auto=format&fit=crop&q=80&w=600',
     cmp: 'CMP 59321',
@@ -42,7 +43,134 @@ const DOCTORES_DATA = {
       'Asesoría en lactancia materna',
       'Vacunación e inmunizaciones'
     ],
-    horarios: 'Mar y Jue: 3:00 pm - 8:00 pm | Sáb: 8:00 am - 2:00 pm'
+    horarios: 'Mar y Jue: 3:00 pm - 8:00 pm | Sáb: 8:00 am - 2:00 pm',
+    slug: 'fernando-sanchez'
+  },
+  'grisnery-manquera': {
+    nombre: 'Dra. Grisnery Guadalupe Manquera Torres',
+    especialidad: 'Pediatría y Neonatología',
+    imagen: 'https://images.unsplash.com/photo-1594824813573-246434e33963?auto=format&fit=crop&q=80&w=600',
+    cmp: 'CMP 59321',
+    rne: 'RNE 24680',
+    bio: 'La Dra. Ana Martínez se dedica plenamente al cuidado del desarrollo integral infantil y al seguimiento del recién nacido de alto riesgo, priorizando una atención empática y orientada a la familia.',
+    estudios: [
+      'Pregrado en Medicina Humana - Universidad Cayetano Heredia.',
+      'Residencia en Pediatría Médica - Instituto Nacional de Salud del Niño.',
+      'Maestría en Nutrición Infantil - Universidad de Barcelona.'
+    ],
+    procedimientos: [
+      'Control de crecimiento y desarrollo (CRED)',
+      'Evaluación del recién nacido',
+      'Asesoría en lactancia materna',
+      'Vacunación e inmunizaciones'
+    ],
+    horarios: 'Mar y Jue: 3:00 pm - 8:00 pm | Sáb: 8:00 am - 2:00 pm',
+    slug: 'grisnery-manquera'
+  },
+  'luis-alvarez': {
+    nombre: 'Dr. Luis Miguel Alvarez Barreda',
+    especialidad: 'Pediatría y Neonatología',
+    imagen: 'https://images.unsplash.com/photo-1594824813573-246434e33963?auto=format&fit=crop&q=80&w=600',
+    cmp: 'CMP 59321',
+    rne: 'RNE 24680',
+    bio: 'La Dra. Ana Martínez se dedica plenamente al cuidado del desarrollo integral infantil y al seguimiento del recién nacido de alto riesgo, priorizando una atención empática y orientada a la familia.',
+    estudios: [
+      'Pregrado en Medicina Humana - Universidad Cayetano Heredia.',
+      'Residencia en Pediatría Médica - Instituto Nacional de Salud del Niño.',
+      'Maestría en Nutrición Infantil - Universidad de Barcelona.'
+    ],
+    procedimientos: [
+      'Control de crecimiento y desarrollo (CRED)',
+      'Evaluación del recién nacido',
+      'Asesoría en lactancia materna',
+      'Vacunación e inmunizaciones'
+    ],
+    horarios: 'Mar y Jue: 3:00 pm - 8:00 pm | Sáb: 8:00 am - 2:00 pm',
+    slug: 'luis-alvarez'
+  },
+  'magaly-suarez': {
+    nombre: 'Dra. Magaly Mirtha Suarez Acevedo',
+    especialidad: 'Pediatría y Neonatología',
+    imagen: 'https://images.unsplash.com/photo-1594824813573-246434e33963?auto=format&fit=crop&q=80&w=600',
+    cmp: 'CMP 59321',
+    rne: 'RNE 24680',
+    bio: 'La Dra. Ana Martínez se dedica plenamente al cuidado del desarrollo integral infantil y al seguimiento del recién nacido de alto riesgo, priorizando una atención empática y orientada a la familia.',
+    estudios: [
+      'Pregrado en Medicina Humana - Universidad Cayetano Heredia.',
+      'Residencia en Pediatría Médica - Instituto Nacional de Salud del Niño.',
+      'Maestría en Nutrición Infantil - Universidad de Barcelona.'
+    ],
+    procedimientos: [
+      'Control de crecimiento y desarrollo (CRED)',
+      'Evaluación del recién nacido',
+      'Asesoría en lactancia materna',
+      'Vacunación e inmunizaciones'
+    ],
+    horarios: 'Mar y Jue: 3:00 pm - 8:00 pm | Sáb: 8:00 am - 2:00 pm',
+    slug: 'magaly-suarez'
+  },
+  'maria-hinojosa': {
+    nombre: 'Dra. María Fernanda Hinojosa Ugarte',
+    especialidad: 'Pediatría y Neonatología',
+    imagen: 'https://images.unsplash.com/photo-1594824813573-246434e33963?auto=format&fit=crop&q=80&w=600',
+    cmp: 'CMP 59321',
+    rne: 'RNE 24680',
+    bio: 'La Dra. Ana Martínez se dedica plenamente al cuidado del desarrollo integral infantil y al seguimiento del recién nacido de alto riesgo, priorizando una atención empática y orientada a la familia.',
+    estudios: [
+      'Pregrado en Medicina Humana - Universidad Cayetano Heredia.',
+      'Residencia en Pediatría Médica - Instituto Nacional de Salud del Niño.',
+      'Maestría en Nutrición Infantil - Universidad de Barcelona.'
+    ],
+    procedimientos: [
+      'Control de crecimiento y desarrollo (CRED)',
+      'Evaluación del recién nacido',
+      'Asesoría en lactancia materna',
+      'Vacunación e inmunizaciones'
+    ],
+    horarios: 'Mar y Jue: 3:00 pm - 8:00 pm | Sáb: 8:00 am - 2:00 pm',
+    slug: 'maria-hinojosa'
+  },
+  'francisco-dominguez': {
+    nombre: 'Dr. Francisco Javier Dominguez Jaime',
+    especialidad: 'Pediatría y Neonatología',
+    imagen: 'https://images.unsplash.com/photo-1594824813573-246434e33963?auto=format&fit=crop&q=80&w=600',
+    cmp: 'CMP 59321',
+    rne: 'RNE 24680',
+    bio: 'La Dra. Ana Martínez se dedica plenamente al cuidado del desarrollo integral infantil y al seguimiento del recién nacido de alto riesgo, priorizando una atención empática y orientada a la familia.',
+    estudios: [
+      'Pregrado en Medicina Humana - Universidad Cayetano Heredia.',
+      'Residencia en Pediatría Médica - Instituto Nacional de Salud del Niño.',
+      'Maestría en Nutrición Infantil - Universidad de Barcelona.'
+    ],
+    procedimientos: [
+      'Control de crecimiento y desarrollo (CRED)',
+      'Evaluación del recién nacido',
+      'Asesoría en lactancia materna',
+      'Vacunación e inmunizaciones'
+    ],
+    horarios: 'Mar y Jue: 3:00 pm - 8:00 pm | Sáb: 8:00 am - 2:00 pm',
+    slug: 'francisco-dominguez'
+  },
+  'greta-tinajeros': {
+    nombre: 'Dra. Greta Francesca Tinajeros Sanchez',
+    especialidad: 'Pediatría y Neonatología',
+    imagen: 'https://images.unsplash.com/photo-1594824813573-246434e33963?auto=format&fit=crop&q=80&w=600',
+    cmp: 'CMP 59321',
+    rne: 'RNE 24680',
+    bio: 'La Dra. Ana Martínez se dedica plenamente al cuidado del desarrollo integral infantil y al seguimiento del recién nacido de alto riesgo, priorizando una atención empática y orientada a la familia.',
+    estudios: [
+      'Pregrado en Medicina Humana - Universidad Cayetano Heredia.',
+      'Residencia en Pediatría Médica - Instituto Nacional de Salud del Niño.',
+      'Maestría en Nutrición Infantil - Universidad de Barcelona.'
+    ],
+    procedimientos: [
+      'Control de crecimiento y desarrollo (CRED)',
+      'Evaluación del recién nacido',
+      'Asesoría en lactancia materna',
+      'Vacunación e inmunizaciones'
+    ],
+    horarios: 'Mar y Jue: 3:00 pm - 8:00 pm | Sáb: 8:00 am - 2:00 pm',
+    slug: 'greta-tinajeros'
   }
 };
 
@@ -174,7 +302,7 @@ export default async function DoctorProfile({ params }) {
             {/* Botón de conversión directo */}
             <div className="pt-2">
               <Link 
-                href="/#contacto" 
+                href={`/citas?dr=${doctor.slug}`} 
                 className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 bg-[#434bb2] hover:bg-opacity-90 text-white font-bold rounded-xl transition-all shadow-lg shadow-indigo-600/10 text-sm tracking-wide uppercase text-center"
               >
                 Agendar Cita con este Especialista

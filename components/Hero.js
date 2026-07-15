@@ -38,7 +38,8 @@ export default function Hero() {
           </div>
           
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl">
-            La salud es el motor de una vida feliz, en vital salud center creamos un espacio integral de medicina preventiva donde detectamos a tiempo anomalías en tu salud, te brindamos tratamiento oportuno con los mejores médicos y tecnología de vanguardia, te brindamos el cuidado de tu salud con seguridad, calidad y la confianza que necesitas.
+            La salud es la base de una vida plena y feliz. En Vital Salud Center hemos creado un espacio integral de medicina preventiva, diseñado para cuidar de ti y de tu familia en cada etapa de la vida.
+            Nuestro enfoque se centra en la detección temprana de enfermedades y factores de riesgo, permitiéndonos identificar oportunamente cualquier alteración en tu estado de salud. Contamos con un equipo de médicos altamente calificados y tecnología de vanguardia que nos permite brindar diagnósticos precisos y tratamientos efectivos.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 pt-2">
@@ -64,7 +65,7 @@ export default function Hero() {
             </div>
             <div>
               <p className="text-xs font-bold text-slate-500 uppercase tracking-wider">Central Telefónica</p>
-              <p className="text-lg font-extrabold text-[#434bb2] tracking-tight">+1 (555) 0199-234</p>
+              <p className="text-lg font-extrabold text-[#434bb2] tracking-tight">957 045 728</p>
             </div>
           </div>
         </div>
@@ -89,7 +90,7 @@ export default function Hero() {
               </div>
               <div>
                 <p className="text-sm font-bold text-slate-900">Central Telefónica</p>
-                <p className="text-xl font-extrabold text-[#434bb2] tracking-tight">+1 (555) 0199-234</p>
+                <p className="text-xl font-extrabold text-[#434bb2] tracking-tight">957 045 728</p>
               </div>
             </div>
           </div>

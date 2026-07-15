@@ -2,6 +2,22 @@ import React from 'react';
 import { Phone, Mail, MapPin } from 'lucide-react';
 
 export default function Contacto() {
+  const services = [
+    { id: 1, name: "Laboratorio de Patología" },
+    { id: 2, name: "Biopsias" },
+    { id: 3, name: "Exámenes de Laboratorio Clínico" },
+    { id: 4, name: "Chequeos Preventivos" },
+    { id: 5, name: "Medicina General" },
+    { id: 6, name: "Ginecología" },
+    { id: 7, name: "Cardiología" },
+    { id: 8, name: "Gastroenterología" },
+    { id: 9, name: "Test de Aliento" },
+    { id: 10, name: "Imágenes Médicas" },
+    { id: 11, name: "Inmunología y Alergia" },
+    { id: 12, name: "Oncología" },
+    { id: 13, name: "Vitaminas y Suplementación" },
+  ];
+
   return (
     <section id="contacto" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -24,7 +40,7 @@ export default function Contacto() {
                 </div>
                 <div>
                   <p className="text-xs text-emerald-100/70 font-semibold uppercase tracking-wider">Llámanos</p>
-                  <p className="text-base font-bold text-white">+1 (555) 0199-234</p>
+                  <p className="text-base font-bold text-white">957 045 728</p>
                 </div>
               </div>
 
@@ -34,7 +50,7 @@ export default function Contacto() {
                 </div>
                 <div>
                   <p className="text-xs text-emerald-100/70 font-semibold uppercase tracking-wider">Escríbenos</p>
-                  <p className="text-base font-bold text-white">contacto@vitalsalud.com</p>
+                  <p className="text-base font-bold text-white">vitalsaludcenter2025@gmail.com</p>
                 </div>
               </div>
 
@@ -44,7 +60,7 @@ export default function Contacto() {
                 </div>
                 <div>
                   <p className="text-xs text-emerald-100/70 font-semibold uppercase tracking-wider">Sede Principal</p>
-                  <p className="text-base font-bold text-white">Av. de la Salud 456, Medical City</p>
+                  <p className="text-base font-bold text-white">Cayaltí 596, Santiago de Surco, Lima – Perú</p>
                 </div>
               </div>
             </div>
@@ -52,7 +68,7 @@ export default function Contacto() {
             {/* Contenedor del Mapa de Google Maps Activo */}
             <div className="w-full h-48 rounded-2xl overflow-hidden border border-white/20 shadow-md relative group">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3411.0374635955627!2d-118.245453!3d34.052234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDAzJzA4LjAiTiAxMTjCsDE0JzQzLjYiVw!5e0!3m2!1ses!2s" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.714777595568!2d-76.9940177!3d-12.1316521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105b819f727c62d%3A0x6bfa3b82dfcb056c!2sCayalt%C3%AD%20596%2C%20Santiago%20de%20Surco%2015049!5e0!3m2!1ses-419!2spe!4v1719950000000!5m2!1ses-419!2spe" 
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -107,9 +123,11 @@ export default function Contacto() {
                       className="w-full bg-slate-800/80 border border-slate-700/60 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#434bb2] focus:ring-1 focus:ring-[#434bb2] transition-all text-sm appearance-none cursor-pointer"
                     >
                       <option className="bg-slate-800 text-slate-500">Seleccionar servicio</option>
-                      <option className="bg-slate-800 text-white">Medicina General</option>
-                      <option className="bg-slate-800 text-white">Pediatría</option>
-                      <option className="bg-slate-800 text-white">Cardiología</option>
+                      {services.map((service) => (
+                        <option key={service.id} value={service.name} className="bg-slate-800 text-white">
+                          {service.name}
+                        </option>
+                      ))}
                     </select>
                     <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-slate-400">
                       <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">

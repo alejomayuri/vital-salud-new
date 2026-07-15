@@ -20,6 +20,10 @@ export default function Header() {
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
+  const phoneNumber = "+51957045728"; 
+  const message = encodeURIComponent("Hola, me gustaría recibir información sobre las citas y servicios médicos.");
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-slate-50 shadow-sm shadow-[#7aaf43]/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
@@ -39,32 +43,34 @@ export default function Header() {
         
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-10 font-semibold text-base text-slate-800">
-          <a href="#servicios" className="relative py-2 transition-colors hover:text-[#434bb2] group">
+          <Link href="/#servicios" className="relative py-2 transition-colors hover:text-[#434bb2] group">
             Servicios
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#434bb2] transition-all duration-300 group-hover:w-full"></span>
-          </a>
-          <a href="#especialistas" className="relative py-2 transition-colors hover:text-[#434bb2] group">
+          </Link>
+          <Link href="/#especialistas" className="relative py-2 transition-colors hover:text-[#434bb2] group">
             Especialistas
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#434bb2] transition-all duration-300 group-hover:w-full"></span>
-          </a>
-          <a href="#diferencial" className="relative py-2 transition-colors hover:text-[#434bb2] group">
+          </Link>
+          <Link href="/#diferencial" className="relative py-2 transition-colors hover:text-[#434bb2] group">
             Soluciones
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#434bb2] transition-all duration-300 group-hover:w-full"></span>
-          </a>
-          <a href="#contacto" className="relative py-2 transition-colors hover:text-[#434bb2] group">
+          </Link>
+          <Link href="/#contacto" className="relative py-2 transition-colors hover:text-[#434bb2] group">
             Contacto
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#434bb2] transition-all duration-300 group-hover:w-full"></span>
-          </a>
+          </Link>
         </nav>
 
         {/* Zona de Acción Desktop (Teléfono + Botón) */}
         <div className="hidden md:flex items-center gap-8">
           <a 
-            href="tel:+15550199234" 
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-2 font-bold text-slate-800 hover:text-[#434bb2] transition-colors"
           >
             <Phone className="h-5 w-5 text-[#434bb2] stroke-[2.5]" />
-            <span>+1 (555) 019-9234</span>
+            <span>957 045 728</span>
           </a>
           <Link 
             href="/citas" 
@@ -88,28 +94,30 @@ export default function Header() {
       {isOpen && (
         <div className="md:hidden border-b border-slate-100 bg-white absolute top-[84px] left-0 w-full shadow-xl z-50 animate-in fade-in duration-150">
           <nav className="flex flex-col p-6 space-y-4 font-bold text-lg text-slate-800">
-            <a href="#servicios" onClick={closeMenu} className="hover:text-[#434bb2] hover:bg-slate-50 p-3 rounded-xl transition-all">
+            <Link href="/#servicios" onClick={closeMenu} className="hover:text-[#434bb2] hover:bg-slate-50 p-3 rounded-xl transition-all">
               Servicios
-            </a>
-            <a href="#especialistas" onClick={closeMenu} className="hover:text-[#434bb2] hover:bg-slate-50 p-3 rounded-xl transition-all">
+            </Link>
+            <Link href="/#especialistas" onClick={closeMenu} className="hover:text-[#434bb2] hover:bg-slate-50 p-3 rounded-xl transition-all">
               Especialistas
-            </a>
-            <a href="#diferencial" onClick={closeMenu} className="hover:text-[#434bb2] hover:bg-slate-50 p-3 rounded-xl transition-all">
+            </Link>
+            <Link href="/#diferencial" onClick={closeMenu} className="hover:text-[#434bb2] hover:bg-slate-50 p-3 rounded-xl transition-all">
               Soluciones
-            </a>
-            <a href="#contacto" onClick={closeMenu} className="hover:text-[#434bb2] hover:bg-slate-50 p-3 rounded-xl transition-all">
+            </Link>
+            <Link href="/#contacto" onClick={closeMenu} className="hover:text-[#434bb2] hover:bg-slate-50 p-3 rounded-xl transition-all">
               Contacto
-            </a>
-            
+            </Link>
+
             <div className="pt-4 px-3 space-y-4">
               {/* Teléfono Móvil Destacado */}
               <a 
-                href="tel:+15550199234" 
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={closeMenu}
                 className="flex items-center justify-center gap-3 bg-slate-50 hover:bg-slate-100 text-[#434bb2] px-5 py-3.5 rounded-xl font-bold transition-all text-base border border-slate-100"
               >
                 <Phone className="h-5 w-5 stroke-[2.5]" />
-                +1 (555) 019-9234
+                957 045 728
               </a>
 
               {/* Botón de Cita Móvil */}
@@ -123,7 +131,7 @@ export default function Header() {
 
               {/* SECCIÓN DE REDES SOCIALES */}
               <div className="flex items-center justify-center gap-6 pt-5 border-t border-slate-100">
-                <a href="mailto:contacto@vitalsalud.com" className="text-[#434bb2] hover:opacity-80 transition-opacity p-2 flex items-center justify-center" aria-label="Email">
+                <a href="mailto:vitalsaludcenter2025@gmail.com" className="text-[#434bb2] hover:opacity-80 transition-opacity p-2 flex items-center justify-center" aria-label="Email">
                   <Mail className="h-6 w-6 stroke-[2.5]" />
                 </a>
                 <a href="https://wa.me/15550199234" target="_blank" rel="noopener noreferrer" className="text-[#434bb2] hover:text-[#7aaf43] transition-colors p-2" aria-label="WhatsApp">

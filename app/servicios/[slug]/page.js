@@ -4,8 +4,8 @@ import { ArrowLeft, CheckCircle2, ShieldCheck, Clock, Activity, FileText } from 
 
 // Simulación de la base de datos de servicios médicos
 const SERVICIOS_DATA = {
-  'medicina-general': {
-    titulo: 'Medicina General',
+  'laboratorio-de-patologia': {
+    titulo: 'Laboratorio de Patología',
     subtitulo: 'Atención primaria integral y preventiva para toda la familia',
     imagen: 'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&q=80&w=800',
     descripcion: 'La consulta de Medicina General es el primer frente de cuidado para tu salud. Nuestros médicos están capacitados para diagnosticar, tratar patologías comunes y coordinar chequeos preventivos anuales, derivándote a especialistas solo cuando es estrictamente necesario.',
@@ -19,13 +19,14 @@ const SERVICIOS_DATA = {
       duracion: '20 a 30 minutos por consulta',
       requisitos: 'Documento de identidad (DNI/CE). Traer exámenes previos si los tuviera.',
       cobertura: 'Aplica para particulares, convenios corporativos y principales EPS.'
-    }
+    },
+    slug: 'laboratorio-de-patologia'
   },
-  'pediatria': {
-    titulo: 'Pediatría y Neonatología',
-    subtitulo: 'Cuidado especializado y empático desde el primer día de vida',
+  'biopsias': {
+    titulo: 'Biopsias',
+    subtitulo: 'Evaluación y diagnóstico preciso de lesiones tisulares',
     imagen: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800',
-    descripcion: 'Acompañamos el crecimiento de tus hijos garantizando un desarrollo saludable. Nuestro servicio cubre desde la atención al recién nacido hasta la adolescencia, priorizando la prevención mediante esquemas de vacunación y monitoreo nutricional.',
+    descripcion: 'Realizamos biopsias para el diagnóstico diferencial de lesiones tisulares. Nuestro equipo de patólogos especializados garantiza resultados precisos y confiables para la toma de decisiones terapéuticas.',
     beneficios: [
       'Control de Crecimiento y Desarrollo Infantil (CRED).',
       'Asesoramiento integral en lactancia materna y alimentación complementaria.',
@@ -36,11 +37,12 @@ const SERVICIOS_DATA = {
       duracion: '30 a 45 minutos por consulta',
       requisitos: 'Tarjeta de vacunación del menor y DNI del apoderado.',
       cobertura: 'Disponible para particulares y planes familiares con EPS.'
-    }
+    },
+    slug: 'biopsias'
   },
-  'cardiologia': {
-    titulo: 'Cardiología Clínica',
-    subtitulo: 'Evaluación y protección avanzada para la salud de tu corazón',
+  'examenes-de-laboratorio-clinico': {
+    titulo: 'Exámenes de Laboratorio Clínico',
+    subtitulo: 'Análisis precisos y confiables para un diagnóstico adecuado',
     imagen: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800',
     descripcion: 'Especialidad orientada a la prevención, diagnóstico precoz y tratamiento de afecciones del sistema cardiovascular. Utilizamos tecnología médica moderna para realizar estudios funcionales que miden con precisión tu rendimiento cardíaco.',
     beneficios: [
@@ -53,7 +55,188 @@ const SERVICIOS_DATA = {
       duracion: '30 minutos por evaluación',
       requisitos: 'Asistir con ropa cómoda si tiene programada una prueba de esfuerzo.',
       cobertura: 'Cobertura integral con aseguradoras seleccionadas y tarifas preferenciales.'
-    }
+    },
+    slug: 'examenes-de-laboratorio-clinico'
+  },
+  'chequeos-preventivos': {
+    titulo: 'Chequeos Preventivos',
+    subtitulo: 'Análisis precisos y confiables para un diagnóstico adecuado',
+    imagen: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800',
+    descripcion: 'Especialidad orientada a la prevención, diagnóstico precoz y tratamiento de afecciones del sistema cardiovascular. Utilizamos tecnología médica moderna para realizar estudios funcionales que miden con precisión tu rendimiento cardíaco.',
+    beneficios: [
+      'Evaluación y control del riesgo quirúrgico cardiovascular.',
+      'Tratamiento avanzado de hipertensión arterial refractaria.',
+      'Descarte de arritmias, soplos y cardiopatías isquémicas.',
+      'Interpretación inmediata de electrocardiogramas y pruebas de esfuerzo.'
+    ],
+    detalles: {
+      duracion: '30 minutos por evaluación',
+      requisitos: 'Asistir con ropa cómoda si tiene programada una prueba de esfuerzo.',
+      cobertura: 'Cobertura integral con aseguradoras seleccionadas y tarifas preferenciales.'
+    },
+    slug: 'chequeos-preventivos'
+  },
+  'medicina-general': {
+    titulo: 'Medicina General',
+    subtitulo: 'Análisis precisos y confiables para un diagnóstico adecuado',
+    imagen: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800',
+    descripcion: 'Especialidad orientada a la prevención, diagnóstico precoz y tratamiento de afecciones del sistema cardiovascular. Utilizamos tecnología médica moderna para realizar estudios funcionales que miden con precisión tu rendimiento cardíaco.',
+    beneficios: [
+      'Evaluación y control del riesgo quirúrgico cardiovascular.',
+      'Tratamiento avanzado de hipertensión arterial refractaria.',
+      'Descarte de arritmias, soplos y cardiopatías isquémicas.',
+      'Interpretación inmediata de electrocardiogramas y pruebas de esfuerzo.'
+    ],
+    detalles: {
+      duracion: '30 minutos por evaluación',
+      requisitos: 'Asistir con ropa cómoda si tiene programada una prueba de esfuerzo.',
+      cobertura: 'Cobertura integral con aseguradoras seleccionadas y tarifas preferenciales.'
+    },
+    slug: 'medicina-general'
+  },
+  'ginecologia': {
+    titulo: 'Ginecología',
+    subtitulo: 'Análisis precisos y confiables para un diagnóstico adecuado',
+    imagen: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800',
+    descripcion: 'Especialidad orientada a la prevención, diagnóstico precoz y tratamiento de afecciones del sistema cardiovascular. Utilizamos tecnología médica moderna para realizar estudios funcionales que miden con precisión tu rendimiento cardíaco.',
+    beneficios: [
+      'Evaluación y control del riesgo quirúrgico cardiovascular.',
+      'Tratamiento avanzado de hipertensión arterial refractaria.',
+      'Descarte de arritmias, soplos y cardiopatías isquémicas.',
+      'Interpretación inmediata de electrocardiogramas y pruebas de esfuerzo.'
+    ],
+    detalles: {
+      duracion: '30 minutos por evaluación',
+      requisitos: 'Asistir con ropa cómoda si tiene programada una prueba de esfuerzo.',
+      cobertura: 'Cobertura integral con aseguradoras seleccionadas y tarifas preferenciales.'
+    },
+    slug: 'ginecologia'
+  },
+  'cardiologia': {
+    titulo: 'Cardiología',
+    subtitulo: 'Análisis precisos y confiables para un diagnóstico adecuado',
+    imagen: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800',
+    descripcion: 'Especialidad orientada a la prevención, diagnóstico precoz y tratamiento de afecciones del sistema cardiovascular. Utilizamos tecnología médica moderna para realizar estudios funcionales que miden con precisión tu rendimiento cardíaco.',
+    beneficios: [
+      'Evaluación y control del riesgo quirúrgico cardiovascular.',
+      'Tratamiento avanzado de hipertensión arterial refractaria.',
+      'Descarte de arritmias, soplos y cardiopatías isquémicas.',
+      'Interpretación inmediata de electrocardiogramas y pruebas de esfuerzo.'
+    ],
+    detalles: {
+      duracion: '30 minutos por evaluación',
+      requisitos: 'Asistir con ropa cómoda si tiene programada una prueba de esfuerzo.',
+      cobertura: 'Cobertura integral con aseguradoras seleccionadas y tarifas preferenciales.'
+    },
+    slug: 'cardiologia'
+  },
+  'gastroenterologia': {
+    titulo: 'Gastroenterología',
+    subtitulo: 'Análisis precisos y confiables para un diagnóstico adecuado',
+    imagen: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800',
+    descripcion: 'Especialidad orientada a la prevención, diagnóstico precoz y tratamiento de afecciones del sistema cardiovascular. Utilizamos tecnología médica moderna para realizar estudios funcionales que miden con precisión tu rendimiento cardíaco.',
+    beneficios: [
+      'Evaluación y control del riesgo quirúrgico cardiovascular.',
+      'Tratamiento avanzado de hipertensión arterial refractaria.',
+      'Descarte de arritmias, soplos y cardiopatías isquémicas.',
+      'Interpretación inmediata de electrocardiogramas y pruebas de esfuerzo.'
+    ],
+    detalles: {
+      duracion: '30 minutos por evaluación',
+      requisitos: 'Asistir con ropa cómoda si tiene programada una prueba de esfuerzo.',
+      cobertura: 'Cobertura integral con aseguradoras seleccionadas y tarifas preferenciales.'
+    },
+    slug: 'gastroenterologia'
+  },
+  'test-de-aliento': {
+    titulo: 'Test de Aliento',
+    subtitulo: 'Análisis precisos y confiables para un diagnóstico adecuado',
+    imagen: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800',
+    descripcion: 'Especialidad orientada a la prevención, diagnóstico precoz y tratamiento de afecciones del sistema cardiovascular. Utilizamos tecnología médica moderna para realizar estudios funcionales que miden con precisión tu rendimiento cardíaco.',
+    beneficios: [
+      'Evaluación y control del riesgo quirúrgico cardiovascular.',
+      'Tratamiento avanzado de hipertensión arterial refractaria.',
+      'Descarte de arritmias, soplos y cardiopatías isquémicas.',
+      'Interpretación inmediata de electrocardiogramas y pruebas de esfuerzo.'
+    ],
+    detalles: {
+      duracion: '30 minutos por evaluación',
+      requisitos: 'Asistir con ropa cómoda si tiene programada una prueba de esfuerzo.',
+      cobertura: 'Cobertura integral con aseguradoras seleccionadas y tarifas preferenciales.'
+    },
+    slug: 'test-de-aliento'
+  },
+  'imagenes-medicas': {
+    titulo: 'Imágenes Médicas',
+    subtitulo: 'Análisis precisos y confiables para un diagnóstico adecuado',
+    imagen: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800',
+    descripcion: 'Especialidad orientada a la prevención, diagnóstico precoz y tratamiento de afecciones del sistema cardiovascular. Utilizamos tecnología médica moderna para realizar estudios funcionales que miden con precisión tu rendimiento cardíaco.',
+    beneficios: [
+      'Evaluación y control del riesgo quirúrgico cardiovascular.',
+      'Tratamiento avanzado de hipertensión arterial refractaria.',
+      'Descarte de arritmias, soplos y cardiopatías isquémicas.',
+      'Interpretación inmediata de electrocardiogramas y pruebas de esfuerzo.'
+    ],
+    detalles: {
+      duracion: '30 minutos por evaluación',
+      requisitos: 'Asistir con ropa cómoda si tiene programada una prueba de esfuerzo.',
+      cobertura: 'Cobertura integral con aseguradoras seleccionadas y tarifas preferenciales.'
+    },
+    slug: 'imagenes-medicas'
+  },
+  'inmunologia-y-alergia': {
+    titulo: 'Inmunología y Alergia',
+    subtitulo: 'Análisis precisos y confiables para un diagnóstico adecuado',
+    imagen: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800',
+    descripcion: 'Especialidad orientada a la prevención, diagnóstico precoz y tratamiento de afecciones del sistema cardiovascular. Utilizamos tecnología médica moderna para realizar estudios funcionales que miden con precisión tu rendimiento cardíaco.',
+    beneficios: [
+      'Evaluación y control del riesgo quirúrgico cardiovascular.',
+      'Tratamiento avanzado de hipertensión arterial refractaria.',
+      'Descarte de arritmias, soplos y cardiopatías isquémicas.',
+      'Interpretación inmediata de electrocardiogramas y pruebas de esfuerzo.'
+    ],
+    detalles: {
+      duracion: '30 minutos por evaluación',
+      requisitos: 'Asistir con ropa cómoda si tiene programada una prueba de esfuerzo.',
+      cobertura: 'Cobertura integral con aseguradoras seleccionadas y tarifas preferenciales.'
+    },
+    slug: 'inmunologia-y-alergia'
+  },
+  'oncologia': {
+    titulo: 'Oncología',
+    subtitulo: 'Análisis precisos y confiables para un diagnóstico adecuado',
+    imagen: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800',
+    descripcion: 'Especialidad orientada a la prevención, diagnóstico precoz y tratamiento de afecciones del sistema cardiovascular. Utilizamos tecnología médica moderna para realizar estudios funcionales que miden con precisión tu rendimiento cardíaco.',
+    beneficios: [
+      'Evaluación y control del riesgo quirúrgico cardiovascular.',
+      'Tratamiento avanzado de hipertensión arterial refractaria.',
+      'Descarte de arritmias, soplos y cardiopatías isquémicas.',
+      'Interpretación inmediata de electrocardiogramas y pruebas de esfuerzo.'
+    ],
+    detalles: {
+      duracion: '30 minutos por evaluación',
+      requisitos: 'Asistir con ropa cómoda si tiene programada una prueba de esfuerzo.',
+      cobertura: 'Cobertura integral con aseguradoras seleccionadas y tarifas preferenciales.'
+    },
+    slug: 'oncologia'
+  },
+  'vitaminas-y-suplementacion': {
+    titulo: 'Vitaminas y Suplementación',
+    subtitulo: 'Análisis precisos y confiables para un diagnóstico adecuado',
+    imagen: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800',
+    descripcion: 'Especialidad orientada a la prevención, diagnóstico precoz y tratamiento de afecciones del sistema cardiovascular. Utilizamos tecnología médica moderna para realizar estudios funcionales que miden con precisión tu rendimiento cardíaco.',
+    beneficios: [
+      'Evaluación y control del riesgo quirúrgico cardiovascular.',
+      'Tratamiento avanzado de hipertensión arterial refractaria.',
+      'Descarte de arritmias, soplos y cardiopatías isquémicas.',
+      'Interpretación inmediata de electrocardiogramas y pruebas de esfuerzo.'
+    ],
+    detalles: {
+      duracion: '30 minutos por evaluación',
+      requisitos: 'Asistir con ropa cómoda si tiene programada una prueba de esfuerzo.',
+      cobertura: 'Cobertura integral con aseguradoras seleccionadas y tarifas preferenciales.'
+    },
+    slug: 'vitaminas-y-suplementacion'
   }
 };
 
@@ -180,7 +363,7 @@ export default async function ServicioInternal({ params }) {
             {/* Botón de Acción a Formulario */}
             <div className="pt-2">
               <Link 
-                href="/#contacto" 
+                href={`/citas?servicio=${servicio.slug}`} 
                 className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 bg-[#7aaf43] hover:bg-[#6c9b3a] text-white font-bold rounded-xl transition-all shadow-lg shadow-[#7aaf43]/10 text-sm tracking-wide uppercase text-center"
               >
                 Solicitar Cita o Cotización
