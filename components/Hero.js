@@ -27,7 +27,7 @@ export default function Hero() {
           {/* Se renderiza aquí en móviles (order-2 interno) y se oculta en lg (pantallas grandes) */}
           <div className="block lg:hidden w-full h-[340px] sm:h-[400px] bg-gradient-to-tr from-[#434bb2] to-[#7aaf43] rounded-2xl shadow-xl overflow-hidden relative border-4 border-white my-2">
             <Image 
-              src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80"
+              src="/images/1.png"
               alt="Equipo de médicos de Vital Salud"
               fill
               className="object-cover mix-blend-multiply opacity-85 contrast-110 object-top"
@@ -74,13 +74,13 @@ export default function Hero() {
         <div className="relative justify-center lg:justify-end hidden lg:flex order-2">
           <div className="absolute -inset-6 bg-gradient-to-tr from-[#434bb2]/15 to-[#7aaf43]/15 rounded-3xl blur-3xl -z-10"></div>
           
-          <div className="w-[500px] h-[580px] bg-gradient-to-tr from-[#434bb2] to-[#7aaf43] rounded-3xl shadow-2xl overflow-hidden relative rotate-2 hover:rotate-0 transition-transform duration-500 border-4 border-white">
+          <div className="w-[570px] h-[580px] bg-gradient-to-tr from-[#434bb2] to-[#7aaf43] rounded-3xl shadow-2xl overflow-hidden relative rotate-2 hover:rotate-0 transition-transform duration-500 border-4 border-white">
             <Image 
-              src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1000&q=80"
+              src="/images/1.png"
               alt="Equipo de médicos de Vital Salud"
               fill
               className="object-cover mix-blend-multiply opacity-85 contrast-110 object-top"
-              sizes="500px"
+              sizes="570px"
             />
             <div className="absolute inset-0 bg-slate-900/5 mix-blend-multiply"></div>
             
