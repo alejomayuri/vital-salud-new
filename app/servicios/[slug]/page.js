@@ -237,6 +237,114 @@ const SERVICIOS_DATA = {
       cobertura: 'Cobertura integral con aseguradoras seleccionadas y tarifas preferenciales.'
     },
     slug: 'vitaminas-y-suplementacion'
+  },
+  'anatomia-patologica': {
+    titulo: 'Anatomía Patológica',
+    subtitulo: 'Análisis precisos y confiables para un diagnóstico adecuado',
+    imagen: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800',
+    descripcion: 'Especialidad orientada a la prevención, diagnóstico precoz y tratamiento de afecciones del sistema cardiovascular. Utilizamos tecnología médica moderna para realizar estudios funcionales que miden con precisión tu rendimiento cardíaco.',
+    beneficios: [
+      'Evaluación y control del riesgo quirúrgico cardiovascular.',
+      'Tratamiento avanzado de hipertensión arterial refractaria.',
+      'Descarte de arritmias, soplos y cardiopatías isquémicas.',
+      'Interpretación inmediata de electrocardiogramas y pruebas de esfuerzo.'
+    ],
+    detalles: {
+      duracion: '30 minutos por evaluación',
+      requisitos: 'Asistir con ropa cómoda si tiene programada una prueba de esfuerzo.',
+      cobertura: 'Cobertura integral con aseguradoras seleccionadas y tarifas preferenciales.'
+    },
+    slug: 'vitaminas-y-suplementacion'
+  },
+  'patologia-clinica': {
+    titulo: 'Patología Clínica',
+    subtitulo: 'Análisis precisos y confiables para un diagnóstico adecuado',
+    imagen: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800',
+    descripcion: 'Especialidad orientada a la prevención, diagnóstico precoz y tratamiento de afecciones del sistema cardiovascular. Utilizamos tecnología médica moderna para realizar estudios funcionales que miden con precisión tu rendimiento cardíaco.',
+    beneficios: [
+      'Evaluación y control del riesgo quirúrgico cardiovascular.',
+      'Tratamiento avanzado de hipertensión arterial refractaria.',
+      'Descarte de arritmias, soplos y cardiopatías isquémicas.',
+      'Interpretación inmediata de electrocardiogramas y pruebas de esfuerzo.'
+    ],
+    detalles: {
+      duracion: '30 minutos por evaluación',
+      requisitos: 'Asistir con ropa cómoda si tiene programada una prueba de esfuerzo.',
+      cobertura: 'Cobertura integral con aseguradoras seleccionadas y tarifas preferenciales.'
+    },
+    slug: 'vitaminas-y-suplementacion'
+  },
+  'medicina-energetica': {
+    titulo: 'Medicina Energética',
+    subtitulo: 'Análisis precisos y confiables para un diagnóstico adecuado',
+    imagen: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800',
+    descripcion: 'Especialidad orientada a la prevención, diagnóstico precoz y tratamiento de afecciones del sistema cardiovascular. Utilizamos tecnología médica moderna para realizar estudios funcionales que miden con precisión tu rendimiento cardíaco.',
+    beneficios: [
+      'Evaluación y control del riesgo quirúrgico cardiovascular.',
+      'Tratamiento avanzado de hipertensión arterial refractaria.',
+      'Descarte de arritmias, soplos y cardiopatías isquémicas.',
+      'Interpretación inmediata de electrocardiogramas y pruebas de esfuerzo.'
+    ],
+    detalles: {
+      duracion: '30 minutos por evaluación',
+      requisitos: 'Asistir con ropa cómoda si tiene programada una prueba de esfuerzo.',
+      cobertura: 'Cobertura integral con aseguradoras seleccionadas y tarifas preferenciales.'
+    },
+    slug: 'vitaminas-y-suplementacion'
+  },
+  'carnet-de-sanidad': {
+    titulo: 'Carnet de Sanidad',
+    subtitulo: 'Análisis precisos y confiables para un diagnóstico adecuado',
+    imagen: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800',
+    descripcion: 'Especialidad orientada a la prevención, diagnóstico precoz y tratamiento de afecciones del sistema cardiovascular. Utilizamos tecnología médica moderna para realizar estudios funcionales que miden con precisión tu rendimiento cardíaco.',
+    beneficios: [
+      'Evaluación y control del riesgo quirúrgico cardiovascular.',
+      'Tratamiento avanzado de hipertensión arterial refractaria.',
+      'Descarte de arritmias, soplos y cardiopatías isquémicas.',
+      'Interpretación inmediata de electrocardiogramas y pruebas de esfuerzo.'
+    ],
+    detalles: {
+      duracion: '30 minutos por evaluación',
+      requisitos: 'Asistir con ropa cómoda si tiene programada una prueba de esfuerzo.',
+      cobertura: 'Cobertura integral con aseguradoras seleccionadas y tarifas preferenciales.'
+    },
+    slug: 'vitaminas-y-suplementacion'
+  },
+  'test-molecular-de-vph': {
+    titulo: 'Test Molecular de VPH',
+    subtitulo: 'Análisis precisos y confiables para un diagnóstico adecuado',
+    imagen: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800',
+    descripcion: 'Especialidad orientada a la prevención, diagnóstico precoz y tratamiento de afecciones del sistema cardiovascular. Utilizamos tecnología médica moderna para realizar estudios funcionales que miden con precisión tu rendimiento cardíaco.',
+    beneficios: [
+      'Evaluación y control del riesgo quirúrgico cardiovascular.',
+      'Tratamiento avanzado de hipertensión arterial refractaria.',
+      'Descarte de arritmias, soplos y cardiopatías isquémicas.',
+      'Interpretación inmediata de electrocardiogramas y pruebas de esfuerzo.'
+    ],
+    detalles: {
+      duracion: '30 minutos por evaluación',
+      requisitos: 'Asistir con ropa cómoda si tiene programada una prueba de esfuerzo.',
+      cobertura: 'Cobertura integral con aseguradoras seleccionadas y tarifas preferenciales.'
+    },
+    slug: 'vitaminas-y-suplementacion'
+  },
+  'evaluaciones-medicas-ocupacionales': {
+    titulo: 'Evaluaciones Médicas Ocupacionales',
+    subtitulo: 'Análisis precisos y confiables para un diagnóstico adecuado',
+    imagen: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800',
+    descripcion: 'Especialidad orientada a la prevención, diagnóstico precoz y tratamiento de afecciones del sistema cardiovascular. Utilizamos tecnología médica moderna para realizar estudios funcionales que miden con precisión tu rendimiento cardíaco.',
+    beneficios: [
+      'Evaluación y control del riesgo quirúrgico cardiovascular.',
+      'Tratamiento avanzado de hipertensión arterial refractaria.',
+      'Descarte de arritmias, soplos y cardiopatías isquémicas.',
+      'Interpretación inmediata de electrocardiogramas y pruebas de esfuerzo.'
+    ],
+    detalles: {
+      duracion: '30 minutos por evaluación',
+      requisitos: 'Asistir con ropa cómoda si tiene programada una prueba de esfuerzo.',
+      cobertura: 'Cobertura integral con aseguradoras seleccionadas y tarifas preferenciales.'
+    },
+    slug: 'vitaminas-y-suplementacion'
   }
 };
 

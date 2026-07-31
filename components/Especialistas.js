@@ -5,13 +5,13 @@ import Link from "next/link"; // Usamos Link de Next.js para la navegación inte
 import { ArrowRight } from "lucide-react";
 
 const medicos = [
-  {
-    id: "1",
-    name: "Dra. Carla Pierina Garcia Torres",
-    specialty: "Inmunología y Alergia",
-    image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80",
-    slug: "/dr/carla-garcia"
-  },
+  // {
+  //   id: "1",
+  //   name: "Dra. Carla Pierina Garcia Torres",
+  //   specialty: "Inmunología y Alergia",
+  //   image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80",
+  //   slug: "/dr/carla-garcia"
+  // },
   {
     id: "2",
     name: "Dr. Fernando José Sanchez Sevillano",
@@ -40,18 +40,18 @@ const medicos = [
     image: "/images/suarez.png",
     slug: "/dr/magaly-suarez"
   },
-  {
-    id: "6",
-    name: "Dra. María Fernanda Hinojosa Ugarte",
-    specialty: "Cardiología",
-    image: "https://images.unsplash.com/photo-1594824813573-246434e3b96f?auto=format&fit=crop&w=600&q=80",
-    slug: "/dr/maria-hinojosa"
-  },
+  // {
+  //   id: "6",
+  //   name: "Dra. María Fernanda Hinojosa Ugarte",
+  //   specialty: "Cardiología",
+  //   image: "https://images.unsplash.com/photo-1594824813573-246434e3b96f?auto=format&fit=crop&w=600&q=80",
+  //   slug: "/dr/maria-hinojosa"
+  // },
   {
     id: "7",
     name: "Dr. Francisco Javier Dominguez Jaime",
     specialty: "Medicina energética",
-    image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=600&q=80",
+    image: "/images/dominguez.jpeg",
     slug: "/dr/francisco-dominguez"
   },
   {
@@ -86,12 +86,12 @@ export default function Especialistas() {
         </div>
 
         {/* Grid de Médicos */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
           {medicos.map((medico) => (
             <Link 
               href={medico.slug} 
               key={medico.id}
-              className="group block bg-slate-50 rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl hover:border-indigo-100 transition-all duration-300"
+              className="group block rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl hover:border-indigo-100 transition-all duration-300"
             >
               {/* Contenedor de la foto */}
               <div className="relative w-full aspect-[4/5] bg-slate-200 overflow-hidden">

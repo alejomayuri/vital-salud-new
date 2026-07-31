@@ -38,8 +38,8 @@ export default function Hero() {
           </div>
           
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl">
-            La salud es la base de una vida plena y feliz. En Vital Salud Center hemos creado un espacio integral de medicina preventiva, diseñado para cuidar de ti y de tu familia en cada etapa de la vida.
-            Nuestro enfoque se centra en la detección temprana de enfermedades y factores de riesgo, permitiéndonos identificar oportunamente cualquier alteración en tu estado de salud. Contamos con un equipo de médicos altamente calificados y tecnología de vanguardia que nos permite brindar diagnósticos precisos y tratamientos efectivos.
+            En Vital Salud Center transformamos la salud en una experiencia de bienestar integral y futuro. Somos un centro innovador especializado en prevención y diagnóstico avanzado, diseñado para cuidar de ti, de tu familia y del talento de tu empresa en cada etapa de la vida.
+            Combinamos un equipo médico altamente calificado con tecnología de vanguardia para ofrecerte detección temprana, diagnósticos precisos y tratamientos efectivos. Ya sea que nos visites de forma individual o a través de nuestros programas corporativos, en Vital Salud Center nos anticipamos a cualquier alteración para asegurar tu tranquilidad y calidad de vida.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 pt-2">
