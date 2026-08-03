@@ -31,6 +31,7 @@ export default function HomePage() {
     },
     {
       id: 5, name: "Anatomía Patológica",
+      desc: "Análisis especializado de tejidos y células recolectadas mediante biopsias o citologías. Su función principal es estudiar las muestras bajo el microscopio para diagnosticar enfermedades complejas, determinar si una lesión es benigna o maligna y guiar al médico tratante hacia el mejor tratamiento." ,
       slug: "servicios/anatomia-patologica"
     },
     {
@@ -106,7 +107,7 @@ export default function HomePage() {
       <Servicios title="Procedimientos Especiales" servicios={procedimientos} />
       <Especialistas />
       <PlanesDiferencial />
-      <Contacto />   
+      <Contacto />
     </div>
   );
 }

@@ -56,16 +56,16 @@ const medicos = [
   },
   {
     id: "8",
-    name: "Dra. Greta Francesca Tinajeros Sanchez",
-    specialty: "Exámenes de Lab. clínico",
-    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=80",
-    slug: "/dr/greta-tinajeros"
+    name: "Dr. Manuel Chavez Gonzales",
+    specialty: "Patología clínica",
+    image: "/images/chavez.jpeg",
+    slug: "/dr/manuel-chavez"
   }
 ];
 
 export default function Especialistas() {
   return (
-    <section id="especialistas" className="py-24 bg-white relative overflow-hidden">
+    <section id="especialistas" className="lg:py-24 py-8 bg-white relative overflow-hidden">
       
       {/* Sutil círculo decorativo detrás */}
       <div className="absolute right-0 top-1/4 w-96 h-96 bg-emerald-50/30 rounded-full blur-3xl pointer-events-none"></div>

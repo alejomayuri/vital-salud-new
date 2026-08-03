@@ -4,8 +4,8 @@ import { ArrowLeft, CheckCircle2, ShieldCheck, Clock, Activity, FileText } from 
 
 // Simulación de la base de datos de servicios médicos
 const SERVICIOS_DATA = {
-  'laboratorio-de-patologia': {
-    titulo: 'Laboratorio de Patología',
+  'anatomia-patologica': {
+    titulo: 'Anatomía Patológica',
     subtitulo: 'Atención primaria integral y preventiva para toda la familia',
     imagen: 'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&q=80&w=800',
     descripcion: 'La consulta de Medicina General es el primer frente de cuidado para tu salud. Nuestros médicos están capacitados para diagnosticar, tratar patologías comunes y coordinar chequeos preventivos anuales, derivándote a especialistas solo cuando es estrictamente necesario.',
@@ -20,7 +20,8 @@ const SERVICIOS_DATA = {
       requisitos: 'Documento de identidad (DNI/CE). Traer exámenes previos si los tuviera.',
       cobertura: 'Aplica para particulares, convenios corporativos y principales EPS.'
     },
-    slug: 'laboratorio-de-patologia'
+    slug: 'anatomia-patologica',
+    type: 'Servicios Médicos y Especialidades'
   },
   'biopsias': {
     titulo: 'Biopsias',
@@ -38,7 +39,8 @@ const SERVICIOS_DATA = {
       requisitos: 'Tarjeta de vacunación del menor y DNI del apoderado.',
       cobertura: 'Disponible para particulares y planes familiares con EPS.'
     },
-    slug: 'biopsias'
+    slug: 'biopsias',
+    type: 'Procedimientos y Exámenes'
   },
   'examenes-de-laboratorio-clinico': {
     titulo: 'Exámenes de Laboratorio Clínico',
@@ -56,7 +58,8 @@ const SERVICIOS_DATA = {
       requisitos: 'Asistir con ropa cómoda si tiene programada una prueba de esfuerzo.',
       cobertura: 'Cobertura integral con aseguradoras seleccionadas y tarifas preferenciales.'
     },
-    slug: 'examenes-de-laboratorio-clinico'
+    slug: 'examenes-de-laboratorio-clinico',
+    type: 'Procedimientos y Exámenes'
   },
   'chequeos-preventivos': {
     titulo: 'Chequeos Preventivos',
@@ -74,7 +77,8 @@ const SERVICIOS_DATA = {
       requisitos: 'Asistir con ropa cómoda si tiene programada una prueba de esfuerzo.',
       cobertura: 'Cobertura integral con aseguradoras seleccionadas y tarifas preferenciales.'
     },
-    slug: 'chequeos-preventivos'
+    slug: 'chequeos-preventivos',
+    type: 'Procedimientos y Exámenes'
   },
   'medicina-general': {
     titulo: 'Medicina General',
@@ -92,7 +96,8 @@ const SERVICIOS_DATA = {
       requisitos: 'Asistir con ropa cómoda si tiene programada una prueba de esfuerzo.',
       cobertura: 'Cobertura integral con aseguradoras seleccionadas y tarifas preferenciales.'
     },
-    slug: 'medicina-general'
+    slug: 'medicina-general',
+    type: 'Servicios Médicos y Especialidades'
   },
   'ginecologia': {
     titulo: 'Ginecología',
@@ -110,7 +115,8 @@ const SERVICIOS_DATA = {
       requisitos: 'Asistir con ropa cómoda si tiene programada una prueba de esfuerzo.',
       cobertura: 'Cobertura integral con aseguradoras seleccionadas y tarifas preferenciales.'
     },
-    slug: 'ginecologia'
+    slug: 'ginecologia',
+    type: 'Servicios Médicos y Especialidades'
   },
   'cardiologia': {
     titulo: 'Cardiología',
@@ -128,7 +134,8 @@ const SERVICIOS_DATA = {
       requisitos: 'Asistir con ropa cómoda si tiene programada una prueba de esfuerzo.',
       cobertura: 'Cobertura integral con aseguradoras seleccionadas y tarifas preferenciales.'
     },
-    slug: 'cardiologia'
+    slug: 'cardiologia',
+    type: 'Servicios Médicos y Especialidades'
   },
   'gastroenterologia': {
     titulo: 'Gastroenterología',
@@ -146,7 +153,8 @@ const SERVICIOS_DATA = {
       requisitos: 'Asistir con ropa cómoda si tiene programada una prueba de esfuerzo.',
       cobertura: 'Cobertura integral con aseguradoras seleccionadas y tarifas preferenciales.'
     },
-    slug: 'gastroenterologia'
+    slug: 'gastroenterologia',
+    type: 'Servicios Médicos y Especialidades'
   },
   'test-de-aliento': {
     titulo: 'Test de Aliento',
@@ -164,7 +172,8 @@ const SERVICIOS_DATA = {
       requisitos: 'Asistir con ropa cómoda si tiene programada una prueba de esfuerzo.',
       cobertura: 'Cobertura integral con aseguradoras seleccionadas y tarifas preferenciales.'
     },
-    slug: 'test-de-aliento'
+    slug: 'test-de-aliento',
+    type: 'Procedimientos y Exámenes'
   },
   'imagenes-medicas': {
     titulo: 'Imágenes Médicas',
@@ -182,7 +191,8 @@ const SERVICIOS_DATA = {
       requisitos: 'Asistir con ropa cómoda si tiene programada una prueba de esfuerzo.',
       cobertura: 'Cobertura integral con aseguradoras seleccionadas y tarifas preferenciales.'
     },
-    slug: 'imagenes-medicas'
+    slug: 'imagenes-medicas',
+    type: 'Procedimientos y Exámenes'
   },
   'inmunologia-y-alergia': {
     titulo: 'Inmunología y Alergia',
@@ -200,7 +210,8 @@ const SERVICIOS_DATA = {
       requisitos: 'Asistir con ropa cómoda si tiene programada una prueba de esfuerzo.',
       cobertura: 'Cobertura integral con aseguradoras seleccionadas y tarifas preferenciales.'
     },
-    slug: 'inmunologia-y-alergia'
+    slug: 'inmunologia-y-alergia',
+    type: 'Servicios Médicos y Especialidades'
   },
   'oncologia': {
     titulo: 'Oncología',
@@ -218,7 +229,8 @@ const SERVICIOS_DATA = {
       requisitos: 'Asistir con ropa cómoda si tiene programada una prueba de esfuerzo.',
       cobertura: 'Cobertura integral con aseguradoras seleccionadas y tarifas preferenciales.'
     },
-    slug: 'oncologia'
+    slug: 'oncologia',
+    type: 'Servicios Médicos y Especialidades'
   },
   'vitaminas-y-suplementacion': {
     titulo: 'Vitaminas y Suplementación',
@@ -236,25 +248,8 @@ const SERVICIOS_DATA = {
       requisitos: 'Asistir con ropa cómoda si tiene programada una prueba de esfuerzo.',
       cobertura: 'Cobertura integral con aseguradoras seleccionadas y tarifas preferenciales.'
     },
-    slug: 'vitaminas-y-suplementacion'
-  },
-  'anatomia-patologica': {
-    titulo: 'Anatomía Patológica',
-    subtitulo: 'Análisis precisos y confiables para un diagnóstico adecuado',
-    imagen: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800',
-    descripcion: 'Especialidad orientada a la prevención, diagnóstico precoz y tratamiento de afecciones del sistema cardiovascular. Utilizamos tecnología médica moderna para realizar estudios funcionales que miden con precisión tu rendimiento cardíaco.',
-    beneficios: [
-      'Evaluación y control del riesgo quirúrgico cardiovascular.',
-      'Tratamiento avanzado de hipertensión arterial refractaria.',
-      'Descarte de arritmias, soplos y cardiopatías isquémicas.',
-      'Interpretación inmediata de electrocardiogramas y pruebas de esfuerzo.'
-    ],
-    detalles: {
-      duracion: '30 minutos por evaluación',
-      requisitos: 'Asistir con ropa cómoda si tiene programada una prueba de esfuerzo.',
-      cobertura: 'Cobertura integral con aseguradoras seleccionadas y tarifas preferenciales.'
-    },
-    slug: 'vitaminas-y-suplementacion'
+    slug: 'vitaminas-y-suplementacion',
+    type: 'Procedimientos y Exámenes'
   },
   'patologia-clinica': {
     titulo: 'Patología Clínica',
@@ -272,7 +267,8 @@ const SERVICIOS_DATA = {
       requisitos: 'Asistir con ropa cómoda si tiene programada una prueba de esfuerzo.',
       cobertura: 'Cobertura integral con aseguradoras seleccionadas y tarifas preferenciales.'
     },
-    slug: 'vitaminas-y-suplementacion'
+    slug: 'vitaminas-y-suplementacion',
+    type: 'Servicios Médicos y Especialidades'
   },
   'medicina-energetica': {
     titulo: 'Medicina Energética',
@@ -290,7 +286,8 @@ const SERVICIOS_DATA = {
       requisitos: 'Asistir con ropa cómoda si tiene programada una prueba de esfuerzo.',
       cobertura: 'Cobertura integral con aseguradoras seleccionadas y tarifas preferenciales.'
     },
-    slug: 'vitaminas-y-suplementacion'
+    slug: 'vitaminas-y-suplementacion',
+    type: 'Servicios Médicos y Especialidades'
   },
   'carnet-de-sanidad': {
     titulo: 'Carnet de Sanidad',
@@ -308,7 +305,8 @@ const SERVICIOS_DATA = {
       requisitos: 'Asistir con ropa cómoda si tiene programada una prueba de esfuerzo.',
       cobertura: 'Cobertura integral con aseguradoras seleccionadas y tarifas preferenciales.'
     },
-    slug: 'vitaminas-y-suplementacion'
+    slug: 'vitaminas-y-suplementacion',
+    type: 'Procedimientos y Exámenes'
   },
   'test-molecular-de-vph': {
     titulo: 'Test Molecular de VPH',
@@ -326,7 +324,8 @@ const SERVICIOS_DATA = {
       requisitos: 'Asistir con ropa cómoda si tiene programada una prueba de esfuerzo.',
       cobertura: 'Cobertura integral con aseguradoras seleccionadas y tarifas preferenciales.'
     },
-    slug: 'vitaminas-y-suplementacion'
+    slug: 'vitaminas-y-suplementacion',
+    type: 'Procedimientos y Exámenes'
   },
   'evaluaciones-medicas-ocupacionales': {
     titulo: 'Evaluaciones Médicas Ocupacionales',
@@ -344,7 +343,27 @@ const SERVICIOS_DATA = {
       requisitos: 'Asistir con ropa cómoda si tiene programada una prueba de esfuerzo.',
       cobertura: 'Cobertura integral con aseguradoras seleccionadas y tarifas preferenciales.'
     },
-    slug: 'vitaminas-y-suplementacion'
+    slug: 'vitaminas-y-suplementacion',
+    type: 'Procedimientos y Exámenes'
+  },
+  'salud-ocupacional': {
+    titulo: 'Salud Ocupacional',
+    subtitulo: 'Análisis precisos y confiables para un diagnóstico adecuado',
+    imagen: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800',
+    descripcion: 'Especialidad orientada a la prevención, diagnóstico precoz y tratamiento de afecciones del sistema cardiovascular. Utilizamos tecnología médica moderna para realizar estudios funcionales que miden con precisión tu rendimiento cardíaco.',
+    beneficios: [
+      'Evaluación y control del riesgo quirúrgico cardiovascular.',
+      'Tratamiento avanzado de hipertensión arterial refractaria.',
+      'Descarte de arritmias, soplos y cardiopatías isquémicas.',
+      'Interpretación inmediata de electrocardiogramas y pruebas de esfuerzo.'
+    ],
+    detalles: {
+      duracion: '30 minutos por evaluación',
+      requisitos: 'Asistir con ropa cómoda si tiene programada una prueba de esfuerzo.',
+      cobertura: 'Cobertura integral con aseguradoras seleccionadas y tarifas preferenciales.'
+    },
+    slug: 'salud-ocupacional',
+    type: 'Servicios Médicos y Especialidades'
   }
 };
 
@@ -437,7 +456,7 @@ export default async function ServicioInternal({ params }) {
             {/* Cabecera del Servicio */}
             <div className="space-y-2">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-50 text-[#7aaf43] border border-emerald-100">
-                <Activity className="h-3.5 w-3.5" /> Especialidad Médica Autorizada
+                <Activity className="h-3.5 w-3.5" /> {servicio.type}
               </span>
               <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">{servicio.titulo}</h1>
               <p className="text-base sm:text-lg text-slate-500 font-medium leading-relaxed">{servicio.subtitulo}</p>

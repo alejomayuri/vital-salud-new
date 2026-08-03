@@ -93,7 +93,10 @@ export default function Header() {
       {/* Mobile Nav Dropdown */}
       {isOpen && (
         <div className="md:hidden border-b border-slate-100 bg-white absolute top-[84px] left-0 w-full shadow-xl z-50 animate-in fade-in duration-150">
-          <nav className="flex flex-col p-6 space-y-4 font-bold text-lg text-slate-800">
+          <nav className="flex flex-col p-6 space-y-1 font-bold text-lg text-slate-800">
+            <Link href="/#nosotros" onClick={closeMenu} className="hover:text-[#434bb2] hover:bg-slate-50 p-3 rounded-xl transition-all">
+              Nosotros
+            </Link>
             <Link href="/#servicios" onClick={closeMenu} className="hover:text-[#434bb2] hover:bg-slate-50 p-3 rounded-xl transition-all">
               Servicios
             </Link>

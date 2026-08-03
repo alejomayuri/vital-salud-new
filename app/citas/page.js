@@ -11,7 +11,7 @@ const DOCTORES = [
   { id: 'magaly-suarez', nombre: 'Dra. Magaly Mirtha Suarez Acevedo' },
   { id: 'maria-hinojosa', nombre: 'Dra. María Fernanda Hinojosa Ugarte' },
   { id: 'francisco-dominguez', nombre: 'Dr. Francisco Javier Dominguez Jaime' },
-  { id: 'greta-tinajeros', nombre: 'Dra. Greta Francesca Tinajeros Sanchez' }
+  { id: 'manuel-chavez', nombre: 'Dr. Manuel Chavez Gonzales' }
 ];
 
 const SERVICIOS = [

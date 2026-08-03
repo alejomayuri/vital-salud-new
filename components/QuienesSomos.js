@@ -3,7 +3,7 @@ import { CheckCircle } from "lucide-react";
 
 export default function QuienesSomos() {
   return (
-    <section id="nosotros" className="py-24 bg-white relative overflow-hidden">
+    <section id="nosotros" className="lg:py-24 py-8 bg-white relative overflow-hidden">
       
       {/* Sutil detalle decorativo de fondo */}
       <div className="absolute -left-16 bottom-0 w-64 h-64 bg-indigo-50/40 rounded-full blur-3xl pointer-events-none"></div>

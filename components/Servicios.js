@@ -84,7 +84,7 @@ export default function Servicios({ title, servicios }) {
   };
 
   return (
-    <section id="servicios" className="py-24 bg-slate-50 overflow-hidden select-none">
+    <section id="servicios" className="lg:py-24 py-8 bg-slate-50 overflow-hidden select-none">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Cabecera de la Sección */}

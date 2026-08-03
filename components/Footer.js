@@ -41,25 +41,25 @@ export default function Header() {
             </div>
             
             <div>
-            <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">Enlaces rápidos</h4>
-            <ul className="space-y-2 text-sm">
-                <li><a href="#inicio" className="hover:text-white transition-colors">Inicio</a></li>
-                <li><a href="#nosotros" className="hover:text-white transition-colors">Quiénes Somos</a></li>
-                <li><a href="#servicios" className="hover:text-white transition-colors">Servicios</a></li>
-                <li><a href="#especialistas" className="hover:text-white transition-colors">Especialistas</a></li>
-                <li><a href="#diferencial" className="hover:text-white transition-colors">Planes Diferenciales</a></li>
-                <li><a href="#contacto" className="hover:text-white transition-colors">Contacto</a></li>
-            </ul>
+                <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">Enlaces rápidos</h4>
+                <ul className="space-y-2 text-sm">
+                    <li><Link href="/#inicio" className="hover:text-white transition-colors">Inicio</Link></li>
+                    <li><Link href="/#nosotros" className="hover:text-white transition-colors">Quiénes Somos</Link></li>
+                    <li><Link href="/#servicios" className="hover:text-white transition-colors">Servicios</Link></li>
+                    <li><Link href="/#especialistas" className="hover:text-white transition-colors">Especialistas</Link></li>
+                    <li><Link href="/#diferencial" className="hover:text-white transition-colors">Planes Diferenciales</Link></li>
+                    <li><Link href="/#contacto" className="hover:text-white transition-colors">Contacto</Link></li>
+                </ul>
             </div>
 
-            <div>
-            <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">Legales</h4>
-            <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-white transition-colors">Políticas de Privacidad</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Términos de Servicio</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Libro de Reclamaciones</a></li>
-            </ul>
-            </div>
+            {/* <div>
+                <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">Legales</h4>
+                <ul className="space-y-2 text-sm">
+                    <li><a href="#" className="hover:text-white transition-colors">Políticas de Privacidad</a></li>
+                    <li><a href="#" className="hover:text-white transition-colors">Términos de Servicio</a></li>
+                    <li><a href="#" className="hover:text-white transition-colors">Libro de Reclamaciones</a></li>
+                </ul>
+            </div> */}
 
             {/* <div>
             <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">Desarrollado por</h4>

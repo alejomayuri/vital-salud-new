@@ -19,7 +19,7 @@ export default function Contacto() {
   ];
 
   return (
-    <section id="contacto" className="py-24 bg-white">
+    <section id="contacto" className="lg:py-24 py-8 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 bg-slate-900 rounded-3xl overflow-hidden shadow-2xl">
           

@@ -27,86 +27,79 @@ const DOCTORES_DATA = {
   },
   'fernando-sanchez': {
     nombre: 'Dr. Fernando José Sanchez Sevillano',
-    especialidad: 'Pediatría y Neonatología',
-    imagen: 'https://images.unsplash.com/photo-1594824813573-246434e33963?auto=format&fit=crop&q=80&w=600',
-    cmp: 'CMP 59321',
-    rne: 'RNE 24680',
-    bio: 'La Dra. Ana Martínez se dedica plenamente al cuidado del desarrollo integral infantil y al seguimiento del recién nacido de alto riesgo, priorizando una atención empática y orientada a la familia.',
-    estudios: [
-      'Pregrado en Medicina Humana - Universidad Cayetano Heredia.',
-      'Residencia en Pediatría Médica - Instituto Nacional de Salud del Niño.',
-      'Maestría en Nutrición Infantil - Universidad de Barcelona.'
-    ],
+    especialidad: 'Radiología',
+    imagen: '/images/sanchez.png',
+    cmp: 'CMP 21662',
+    rne: 'RNE 11314',
+    bio: 'El Dr. Fernando Sanchez es especialista en Radiología e Imágenes Diagnósticas. Con una destacada trayectoria en la interpretación precisa de estudios por imagen, mi compromiso en Vital Salud Center es brindar diagnósticos claros y oportunos que marquen la diferencia en el tratamiento y bienestar de nuestros pacientes.',
+    estudios: [],
     procedimientos: [
-      'Control de crecimiento y desarrollo (CRED)',
-      'Evaluación del recién nacido',
-      'Asesoría en lactancia materna',
-      'Vacunación e inmunizaciones'
+      'Ultrasonido (Ecografía)',
+      'Biopsias guiadas',
+      'Ablación'
     ],
-    horarios: 'Mar y Jue: 3:00 pm - 8:00 pm | Sáb: 8:00 am - 2:00 pm',
+    horarios: 'Previa cita',
     slug: 'fernando-sanchez'
   },
   'grisnery-manquera': {
     nombre: 'Dra. Grisnery Guadalupe Manquera Torres',
-    especialidad: 'Pediatría y Neonatología',
-    imagen: 'https://images.unsplash.com/photo-1594824813573-246434e33963?auto=format&fit=crop&q=80&w=600',
-    cmp: 'CMP 59321',
-    rne: 'RNE 24680',
-    bio: 'La Dra. Ana Martínez se dedica plenamente al cuidado del desarrollo integral infantil y al seguimiento del recién nacido de alto riesgo, priorizando una atención empática y orientada a la familia.',
+    especialidad: 'Anatomía Patológica',
+    imagen: '/images/grisnery.png',
+    cmp: 'CMP 49647',
+    rne: 'RNE 23522',
+    bio: 'La Dra. Grisnery Maquera es especialista en Anatomía Patológica. Con una destacada trayectoria en el análisis preciso de muestras biológicas y tejidos, mi compromiso en Vital Salud Center es brindar diagnósticos patológicos claros, oportunos y rigurosos que marquen la diferencia en el tratamiento y bienestar de nuestros pacientes.',
     estudios: [
-      'Pregrado en Medicina Humana - Universidad Cayetano Heredia.',
-      'Residencia en Pediatría Médica - Instituto Nacional de Salud del Niño.',
-      'Maestría en Nutrición Infantil - Universidad de Barcelona.'
+      'Maestría en Gestión de Servicios de Salud - Universidad San Martín de Porres, Lima.',
+      'Titulo de Especialidad en Anatomía Patológica - Universidad Nacional Federico Villarreal, Lima.',
+      'Titulo de Médico Cirujano - Universidad Católica de Santa María, Arequipa.',
+      'Licenciatura en Medicina Humana - Universidad Católica de Santa María, Arequipa.'
     ],
     procedimientos: [
-      'Control de crecimiento y desarrollo (CRED)',
-      'Evaluación del recién nacido',
-      'Asesoría en lactancia materna',
-      'Vacunación e inmunizaciones'
+      'Procesamiento y análisis histopatológico de muestras biológicas.',
+      'Estudio citológico.',
+      'Biopsias (procesamiento y lectura diagnóstica).',
+      'Reportes de patología con criterios clínicos precisos.'
     ],
-    horarios: 'Mar y Jue: 3:00 pm - 8:00 pm | Sáb: 8:00 am - 2:00 pm',
+    horarios: 'Previa cita',
     slug: 'grisnery-manquera'
   },
   'luis-alvarez': {
     nombre: 'Dr. Luis Miguel Alvarez Barreda',
-    especialidad: 'Pediatría y Neonatología',
-    imagen: 'https://images.unsplash.com/photo-1594824813573-246434e33963?auto=format&fit=crop&q=80&w=600',
-    cmp: 'CMP 59321',
-    rne: 'RNE 24680',
-    bio: 'La Dra. Ana Martínez se dedica plenamente al cuidado del desarrollo integral infantil y al seguimiento del recién nacido de alto riesgo, priorizando una atención empática y orientada a la familia.',
+    especialidad: 'Gastroenterología',
+    imagen: '/images/alvarez.png',
+    cmp: 'CMP 77825',
+    rne: 'RNE 45370',
+    bio: 'El Dr. Luis Álvarez es especialista en Gastroenterología. Con una destacada trayectoria en el diagnóstico y tratamiento de las enfermedades del sistema digestivo, mi compromiso en Vital Salud Center es brindar evaluaciones clínicas claras, oportunas y rigurosas que marquen la diferencia en el tratamiento y bienestar de nuestros pacientes.',
     estudios: [
-      'Pregrado en Medicina Humana - Universidad Cayetano Heredia.',
-      'Residencia en Pediatría Médica - Instituto Nacional de Salud del Niño.',
-      'Maestría en Nutrición Infantil - Universidad de Barcelona.'
+      'Bachiller en Medicina Humana - Universidad Católica de Santa María.',
+      'Titulo de Médico Cirujano - Universidad Católica de Santa María.',
+      'Título de Especialidad en Gastroenterología - Universidad Nacional Federico Villarreal.'
     ],
     procedimientos: [
-      'Control de crecimiento y desarrollo (CRED)',
-      'Evaluación del recién nacido',
-      'Asesoría en lactancia materna',
-      'Vacunación e inmunizaciones'
+      'Evaluación clínica integral del aparato digestivo.',
+      'Endoscopía digestiva alta y colonoscopía.',
+      'Diagnóstico y manejo de patologías gastrointestinales, hepáticas y pancreáticas.',
+      'Seguimiento especializado con criterios clínicos precisos.'
     ],
-    horarios: 'Mar y Jue: 3:00 pm - 8:00 pm | Sáb: 8:00 am - 2:00 pm',
+    horarios: 'Previa cita.',
     slug: 'luis-alvarez'
   },
   'magaly-suarez': {
     nombre: 'Dra. Magaly Mirtha Suarez Acevedo',
-    especialidad: 'Pediatría y Neonatología',
-    imagen: 'https://images.unsplash.com/photo-1594824813573-246434e33963?auto=format&fit=crop&q=80&w=600',
-    cmp: 'CMP 59321',
-    rne: 'RNE 24680',
-    bio: 'La Dra. Ana Martínez se dedica plenamente al cuidado del desarrollo integral infantil y al seguimiento del recién nacido de alto riesgo, priorizando una atención empática y orientada a la familia.',
-    estudios: [
-      'Pregrado en Medicina Humana - Universidad Cayetano Heredia.',
-      'Residencia en Pediatría Médica - Instituto Nacional de Salud del Niño.',
-      'Maestría en Nutrición Infantil - Universidad de Barcelona.'
-    ],
+    especialidad: 'Ginecología y Obstetricia',
+    imagen: '/images/suarez.png',
+    cmp: 'CMP 38525',
+    rne: 'RNE 25646',
+    bio: 'La Dra. Magaly Suárez es especialista en Ginecología. Con una destacada trayectoria en el cuidado de la salud integral de la mujer, mi compromiso en Vital Salud Center es brindar diagnósticos claros, oportunos y rigurosos, garantizando una atención humana y profesional que marque la diferencia en el bienestar de nuestras pacientes.',
+    estudios: [],
     procedimientos: [
-      'Control de crecimiento y desarrollo (CRED)',
-      'Evaluación del recién nacido',
-      'Asesoría en lactancia materna',
-      'Vacunación e inmunizaciones'
+      'Consulta ginecológica integral y control preventivo.',
+      'Ecografía ginecológica.',
+      'Evaluación y manejo de patologías del tracto reproductivo femenino.',
+      'Toma de muestras para estudios citológicos (Papanicolaou) y biopsias ginecológicas.',
+      'Asesoría en salud reproductiva y diagnósticos con criterios clínicos precisos.'
     ],
-    horarios: 'Mar y Jue: 3:00 pm - 8:00 pm | Sáb: 8:00 am - 2:00 pm',
+    horarios: 'Previa cita.',
     slug: 'magaly-suarez'
   },
   'maria-hinojosa': {
@@ -132,45 +125,41 @@ const DOCTORES_DATA = {
   },
   'francisco-dominguez': {
     nombre: 'Dr. Francisco Javier Dominguez Jaime',
-    especialidad: 'Pediatría y Neonatología',
-    imagen: 'https://images.unsplash.com/photo-1594824813573-246434e33963?auto=format&fit=crop&q=80&w=600',
-    cmp: 'CMP 59321',
-    rne: 'RNE 24680',
-    bio: 'La Dra. Ana Martínez se dedica plenamente al cuidado del desarrollo integral infantil y al seguimiento del recién nacido de alto riesgo, priorizando una atención empática y orientada a la familia.',
-    estudios: [
-      'Pregrado en Medicina Humana - Universidad Cayetano Heredia.',
-      'Residencia en Pediatría Médica - Instituto Nacional de Salud del Niño.',
-      'Maestría en Nutrición Infantil - Universidad de Barcelona.'
-    ],
+    especialidad: '',
+    imagen: '/images/dominguez.jpeg',
+    cmp: '',
+    rne: '',
+    bio: 'El Dr. Francisco Javier Domínguez Jaime es especialista en Medicina Energética. Con una destacada trayectoria en el enfoque integral del bienestar y el equilibrio del ser, mi compromiso en Vital Salud Center es brindar evaluaciones claras, oportunas y rigurosas, garantizando una atención humana y profesional que marque la diferencia en el proceso de sanación y armonía de nuestros pacientes.',
+    estudios: ['Universidad San Martín de Porres, Lima. '],
     procedimientos: [
-      'Control de crecimiento y desarrollo (CRED)',
-      'Evaluación del recién nacido',
-      'Asesoría en lactancia materna',
-      'Vacunación e inmunizaciones'
+      'Evaluación intgral del campo energético y balance holístico.',
+      'Terapia de armonización energética.',
+      'Diagnóstico y manejo de bloqueos energéticos que afectan la salud física y emocional.',
+      'Seguimiento personalizado enfocado en la restauración del equilibrio vital.',
+      'Seguimiento personalizado enfocado en la restauración del equilibrio vital.'
     ],
-    horarios: 'Mar y Jue: 3:00 pm - 8:00 pm | Sáb: 8:00 am - 2:00 pm',
+    horarios: 'Previa cita.',
     slug: 'francisco-dominguez'
   },
-  'greta-tinajeros': {
-    nombre: 'Dra. Greta Francesca Tinajeros Sanchez',
-    especialidad: 'Pediatría y Neonatología',
-    imagen: 'https://images.unsplash.com/photo-1594824813573-246434e33963?auto=format&fit=crop&q=80&w=600',
-    cmp: 'CMP 59321',
-    rne: 'RNE 24680',
-    bio: 'La Dra. Ana Martínez se dedica plenamente al cuidado del desarrollo integral infantil y al seguimiento del recién nacido de alto riesgo, priorizando una atención empática y orientada a la familia.',
+  'manuel-chavez': {
+    nombre: 'Dr. Manuel Chavez Gonzales',
+    especialidad: 'Patología clínica',
+    imagen: '/images/chavez.jpeg',
+    cmp: 'CMP 21067',
+    rne: 'RNE 11679',
+    bio: 'Médico patólogo clínico con una sólida trayectoria de 30 años de servicio, habiendo ejercido como jefe del Laboratorio Clínico del Hospital de la FAP. Cuenta además con experiencia como jefe de laboratorio clínico y banco de sangre en el Hospital Félix Torrealba de EsSalud - Ica (1992).',
     estudios: [
-      'Pregrado en Medicina Humana - Universidad Cayetano Heredia.',
-      'Residencia en Pediatría Médica - Instituto Nacional de Salud del Niño.',
-      'Maestría en Nutrición Infantil - Universidad de Barcelona.'
+      'Pregrado en Medicina Humana en UNFV.',
+      'Residencia UNFV.',
+      'Especialidad Patología Clínica.'
     ],
     procedimientos: [
-      'Control de crecimiento y desarrollo (CRED)',
-      'Evaluación del recién nacido',
-      'Asesoría en lactancia materna',
-      'Vacunación e inmunizaciones'
+      'Pruebas esenciales de sangre, orina y otros fluidos corporales para evaluar el estado general de tu salud.',
+      'Detección a tiempo de condiciones como anemia, diabetes, infecciones o alteraciones en los órganos.',
+      'Base fundamental para cualquier control médico.'
     ],
-    horarios: 'Mar y Jue: 3:00 pm - 8:00 pm | Sáb: 8:00 am - 2:00 pm',
-    slug: 'greta-tinajeros'
+    horarios: 'Previa cita.',
+    slug: 'manuel-chavez'
   }
 };
 
@@ -270,19 +259,21 @@ export default async function DoctorProfile({ params }) {
             </div>
 
             {/* Formación y Estudios */}
-            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100 space-y-4">
-              <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2 border-b border-slate-100 pb-3">
-                <Award className="h-5 w-5 text-[#434bb2]" /> Educación y Experiencia
-              </h3>
-              <ul className="space-y-3">
-                {doctor.estudios.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-sm sm:text-base text-slate-600">
-                    <CheckCircle2 className="h-5 w-5 text-[#7aaf43] shrink-0 mt-0.5" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            {doctor.estudios.length > 0 && (
+              <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100 space-y-4">
+                <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2 border-b border-slate-100 pb-3">
+                  <Award className="h-5 w-5 text-[#434bb2]" /> Educación y Experiencia
+                </h3>
+                <ul className="space-y-3">
+                  {doctor.estudios.map((item, idx) => (
+                    <li key={idx} className="flex items-start gap-3 text-sm sm:text-base text-slate-600">
+                      <CheckCircle2 className="h-5 w-5 text-[#7aaf43] shrink-0 mt-0.5" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
             {/* Procedimientos y Áreas de Atención */}
             <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100 space-y-4">
