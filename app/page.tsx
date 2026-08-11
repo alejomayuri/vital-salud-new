@@ -36,6 +36,7 @@ export default function HomePage() {
     },
     {
       id: 6, name: "Patología Clínica",
+      desc: "Servicio en el análisis de fluidos y líquidos corporales mediante técnicas de laboratorio automatizadas y manuales." ,
       slug: "servicios/patologia-clinica"
     },
     { id: 7, name: "Medicina General", 
@@ -44,6 +45,7 @@ export default function HomePage() {
     },
     { 
       id: 8, name: "Medicina Energética",
+      desc: "integramos la medicina energética como un enfoque complementario para equilibrar el bienestar físico, mental y emocional. A través de terapias orientadas a armonizar la energía vital, ayudamos a reducir el estrés, mejorar la vitalidad y potenciar la sanación natural del organismo, brindándote una atención integral y personalizada para tu salud." ,
       slug: "servicios/medicina-energetica"
     },
     { id: 9, name: "Oncología", 
@@ -52,7 +54,13 @@ export default function HomePage() {
     },
     { 
       id: 10, name: "Salud Ocupacional",
+      desc: "Garantizamos el cumplimiento de las normativas vigentes mediante evaluaciones precisas que aseguran la aptitud física y mental de tus colaboradores. Nuestro enfoque preventivo ayuda a identificar riesgos y proteger la salud de tu equipo de trabajo." ,
       slug: "servicios/salud-ocupacional"
+    },
+    { 
+      id: 11, name: "Carnet de Sanidad",
+      desc: "En Vital Salud Center te ofrecemos una gestión rápida y eficiente del carnet de sanidad para garantizar que tu empresa cumpla con las normativas vigentes sin retrasos. Nuestro proceso integral cuenta con evaluaciones confiables y atención especializada en salud ocupacional, convirtiéndonos en tu aliado estratégico para cuidar a tu personal." ,
+      slug: "servicios/carnet-de-sanidad"
     },
     // { id: 1, name: "Laboratorio de Patología", 
     //   desc: "Análisis especializado de tejidos y células recolectadas mediante biopsias o citologías. Su función principal es estudiar las muestras bajo el microscopio para diagnosticar enfermedades complejas, determinar si una lesión es benigna o maligna y guiar al médico tratante hacia el mejor tratamiento.",
@@ -65,36 +73,34 @@ export default function HomePage() {
       desc: "Procedimiento médico mínimamente invasivo que consiste en la extracción de una pequeña muestra de tejido o células del cuerpo para ser analizada en el laboratorio de patología. Es la herramienta definitiva para confirmar diagnósticos precisos en nódulos, órganos o lesiones sospechosas." ,
       slug: "servicios/biopsias"
     },
-    { 
-      id: 2, name: "Carnet de Sanidad",
-      slug: "servicios/carnet-de-sanidad"
-    },
-    { id: 3, name: "Chequeos Preventivos", 
+    { id: 2, name: "Chequeos Preventivos", 
       desc: "Evaluaciones médicas integrales diseñadas para pacientes sanos o con factores de riesgo, cuyo objetivo es detectar enfermedades en etapas iniciales antes de que presenten síntomas. Incluyen consultas, exámenes de laboratorio e imágenes adaptadas a tu edad y estilo de vida." ,
       slug: "servicios/chequeos-preventivos"
     },
-    { id: 4, name: "Exámenes de Laboratorio Clínico", 
+    { id: 3, name: "Exámenes de Laboratorio Clínico", 
       desc: "Pruebas esenciales de sangre, orina y otros fluidos corporales que permiten evaluar el estado general de tu salud. Ayudan a detectar a tiempo condiciones como anemia, diabetes, infecciones o alteraciones en los órganos, sirviendo de base para cualquier control médico." ,
       slug: "servicios/examenes-de-laboratorio-clinico"
     },
-    { id: 5, name: "Imágenes Médicas", 
+    { id: 4, name: "Imágenes Médicas", 
       desc: "Servicio de diagnóstico avanzado que utiliza tecnología como ecografías, para obtener imágenes del interior del cuerpo en tiempo real. Permite visualizar órganos, tejidos y estructuras óseas de forma precisa y sin dolor." ,
       slug: "servicios/imagenes-medicas"
     },
-    { id: 6, name: "Test de Aliento", 
+    { id: 5, name: "Test de Aliento", 
       desc: "Prueba rápida, segura y no invasiva que se utiliza principalmente para detectar la presencia de la bacteria Helicobacter pylori en el estómago (causante de gastritis y úlceras) o para evaluar intolerancias alimentarias y sobrecrecimiento bacteriano." ,
       slug: "servicios/test-de-aliento"
     },
     { 
-      id: 7, name: "Test Molecular de VPH",
+      id: 6, name: "Test Molecular de VPH",
+      desc: "Ofrecemos el test molecular de VPH de 14 y 35 genotipos, una herramienta clave para la detección temprana y precisa que garantiza mayor seguridad en el cuidado de tu salud. Nuestro proceso integral cuenta con tecnología avanzada y atención especializada, brindándote resultados confiables y oportunos." ,
       slug: "servicios/test-molecular-de-vph"
     },
-    { id: 8, name: "Vitaminas y Suplementación", 
+    { id: 7, name: "Vitaminas y Suplementación", 
       desc: "Servicio orientado a evaluar tus niveles nutricionales y guiarte en el uso correcto de micronutrientes esenciales. Su objetivo es optimizar el funcionamiento de tu organismo, fortalecer el sistema inmunitario y corregir deficiencias específicas de manera segura y supervisada." ,
       slug: "servicios/vitaminas-y-suplementacion"
     },
     { 
-      id: 9, name: "Evaluaciones médicas ocupacionales",
+      id: 8, name: "Evaluaciones médicas ocupacionales",
+      desc: "Brindamos servicios médicos en general y en diversas especialidades, además de soluciones integrales en salud ocupacional y medicina clínica. Contamos con un excelente equipo de profesionales que respaldan nuestra labor con más de 30 años de experiencia." ,
       slug: "servicios/evaluaciones-medicas-ocupacionales"
     },
   ]
