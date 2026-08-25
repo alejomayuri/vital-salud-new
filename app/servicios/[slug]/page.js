@@ -26,7 +26,7 @@ const SERVICIOS_DATA = {
   'biopsias': {
     titulo: 'Biopsias',
     // subtitulo: 'Evaluación y diagnóstico preciso de lesiones tisulares',
-    imagen: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800',
+    imagen: '/images/servicios/biopsia.jpeg',
     descripcion: 'Procedimiento médico mínimamente invasivo que consiste en la extracción de una pequeña muestra de tejido o células del cuerpo para ser analizada en el laboratorio de patología. Es la herramienta definitiva para confirmar diagnósticos precisos en nódulos, órganos o lesiones sospechosas.',
     // beneficios: [
     //   'Control de Crecimiento y Desarrollo Infantil (CRED).',

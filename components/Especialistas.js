@@ -5,13 +5,13 @@ import Link from "next/link"; // Usamos Link de Next.js para la navegación inte
 import { ArrowRight } from "lucide-react";
 
 const medicos = [
-  // {
-  //   id: "1",
-  //   name: "Dra. Carla Pierina Garcia Torres",
-  //   specialty: "Inmunología y Alergia",
-  //   image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80",
-  //   slug: "/dr/carla-garcia"
-  // },
+  {
+    id: "1",
+    name: "Dra. Carla Pierina Garcia Torres",
+    specialty: "Inmunología y Alergia",
+    image: "/images/carla.jpeg",
+    slug: "/dr/carla-garcia"
+  },
   {
     id: "2",
     name: "Dr. Fernando José Sanchez Sevillano",

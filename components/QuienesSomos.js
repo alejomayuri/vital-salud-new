@@ -19,7 +19,7 @@ export default function QuienesSomos() {
             {/* Contenedor principal de la imagen con ligera rotación estética */}
             <div className="w-full h-full rounded-[2rem] overflow-hidden shadow-xl border-4 border-white relative -rotate-1 hover:rotate-0 transition-transform duration-500">
               <Image 
-                src="/images/2.png"
+                src="/images/2.jpeg"
                 alt="Instalaciones modernas y consulta médica de Vital Salud"
                 fill
                 className="object-cover"

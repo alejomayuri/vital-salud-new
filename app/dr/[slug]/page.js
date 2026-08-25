@@ -6,23 +6,14 @@ import { ArrowLeft, Calendar, Award, CheckCircle2, Shield, Heart } from 'lucide-
 const DOCTORES_DATA = {
   'carla-garcia': {
     nombre: 'Dra. Carla Pierina Garcia Torres',
-    especialidad: 'Cardiología Clínica',
-    imagen: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=600',
-    cmp: 'CMP 45678',
-    rne: 'RNE 12345',
-    bio: 'El Dr. Juan Pérez cuenta con más de 12 años de experiencia en el diagnóstico y tratamiento de enfermedades cardiovasculares. Es especialista en cardiología intervencionista y prevención de riesgo coronario.',
-    estudios: [
-      'Pregrado en Medicina Humana - Universidad Nacional Mayor de San Marcos.',
-      'Especialización en Cardiología - Universidad de San Martín de Porres.',
-      'Fellowship en Cardiología Intervencionista - Hospital Clínic de Barcelona.'
-    ],
-    procedimientos: [
-      'Ecocardiogramas Doppler color',
-      'Pruebas de esfuerzo (Ergometría)',
-      'Monitoreo de presión (Holter)',
-      'Evaluación de riesgo quirúrgico'
-    ],
-    horarios: 'Lun a Vie: 9:00 am - 1:00 pm | Sáb: 9:00 am - 12:00 pm',
+    especialidad: 'Inmunología y Alergia',
+    imagen: '/images/carla.jpeg',
+    cmp: 'CMP 77826',
+    rne: 'RNE 77826',
+    bio: null,
+    estudios: [],
+    procedimientos: [],
+    horarios: 'Previa cita',
     slug: 'carla-garcia'
   },
   'fernando-sanchez': {
@@ -249,14 +240,17 @@ export default async function DoctorProfile({ params }) {
             </div>
 
             {/* Perfil Profesional */}
-            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100 space-y-4">
-              <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2 border-b border-slate-100 pb-3">
-                <Heart className="h-5 w-5 text-[#434bb2]" /> Perfil Profesional
-              </h3>
-              <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                {doctor.bio}
-              </p>
-            </div>
+            {doctor.bio && (
+              <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100 space-y-4">
+                <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2 border-b border-slate-100 pb-3">
+                  <Heart className="h-5 w-5 text-[#434bb2]" /> Perfil Profesional
+                </h3>
+                <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+                  {doctor.bio}
+                </p>
+              </div>
+            )}
+            
 
             {/* Formación y Estudios */}
             {doctor.estudios.length > 0 && (
@@ -276,20 +270,21 @@ export default async function DoctorProfile({ params }) {
             )}
 
             {/* Procedimientos y Áreas de Atención */}
-            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100 space-y-4">
-              <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2 border-b border-slate-100 pb-3">
-                <CheckCircle2 className="h-5 w-5 text-[#434bb2]" /> Procedimientos y Exámenes
-              </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-                {doctor.procedimientos.map((item, idx) => (
-                  <div key={idx} className="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-100 text-slate-700 font-medium text-xs sm:text-sm">
-                    <span className="w-2 h-2 rounded-full bg-[#7aaf43] shrink-0" />
-                    {item}
+            {doctor.procedimientos.length > 0 && (
+                <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-100 space-y-4">
+                  <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2 border-b border-slate-100 pb-3">
+                    <CheckCircle2 className="h-5 w-5 text-[#434bb2]" /> Procedimientos y Exámenes
+                  </h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                    {doctor.procedimientos.map((item, idx) => (
+                      <div key={idx} className="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-100 text-slate-700 font-medium text-xs sm:text-sm">
+                        <span className="w-2 h-2 rounded-full bg-[#7aaf43] shrink-0" />
+                        {item}
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
-            </div>
-
+                </div>
+              )}
             {/* Botón de conversión directo */}
             <div className="pt-2">
               <Link 

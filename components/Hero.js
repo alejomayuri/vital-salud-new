@@ -27,7 +27,7 @@ export default function Hero() {
           {/* Se renderiza aquí en móviles (order-2 interno) y se oculta en lg (pantallas grandes) */}
           <div className="block lg:hidden w-full h-[340px] sm:h-[400px] bg-gradient-to-tr from-[#434bb2] to-[#7aaf43] rounded-2xl shadow-xl overflow-hidden relative border-4 border-white my-2">
             <Image 
-              src="/images/1.png"
+              src="/images/1.jpeg"
               alt="Equipo de médicos de Vital Salud"
               fill
               className="object-cover mix-blend-multiply opacity-85 contrast-110 object-top"
@@ -38,7 +38,7 @@ export default function Hero() {
           </div>
           
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl">
-            En Vital Salud Center transformamos la salud en una experiencia de bienestar integral y futuro. Somos un centro innovador especializado en prevención y diagnóstico avanzado, diseñado para cuidar de ti, de tu familia y del talento de tu empresa en cada etapa de la vida.
+            En Vital Salud Center transformamos la salud en una experiencia de bienestar integral y futuro. Somos un centro innovador especializado en prevención y diagnóstico temprano, diseñado para cuidar de ti, de tu familia y del talento de tu empresa en cada etapa de la vida.
             Combinamos un equipo médico altamente calificado con tecnología de vanguardia para ofrecerte detección temprana, diagnósticos precisos y tratamientos efectivos. Ya sea que nos visites de forma individual o a través de nuestros programas corporativos, en Vital Salud Center nos anticipamos a cualquier alteración para asegurar tu tranquilidad y calidad de vida.
           </p>
           
@@ -76,7 +76,7 @@ export default function Hero() {
           
           <div className="w-[570px] h-[580px] bg-gradient-to-tr from-[#434bb2] to-[#7aaf43] rounded-3xl shadow-2xl overflow-hidden relative rotate-2 hover:rotate-0 transition-transform duration-500 border-4 border-white">
             <Image 
-              src="/images/1.png"
+              src="/images/1.jpeg"
               alt="Equipo de médicos de Vital Salud"
               fill
               className="object-cover mix-blend-multiply opacity-85 contrast-110 object-top"
