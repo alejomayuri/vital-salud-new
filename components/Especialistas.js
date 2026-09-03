@@ -21,7 +21,7 @@ const medicos = [
   },
   {
     id: "3",
-    name: "Dra. Grisnery Guadalupe Manquera Torres",
+    name: "Dra. Grisnery Guadalupe Maquera Torres",
     specialty: "Anatomía patológica",
     image: "/images/grisnery.png",
     slug: "/dr/grisnery-manquera"

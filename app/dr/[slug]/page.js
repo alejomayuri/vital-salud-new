@@ -33,7 +33,7 @@ const DOCTORES_DATA = {
     slug: 'fernando-sanchez'
   },
   'grisnery-manquera': {
-    nombre: 'Dra. Grisnery Guadalupe Manquera Torres',
+    nombre: 'Dra. Grisnery Guadalupe Maquera Torres',
     especialidad: 'Anatomía Patológica',
     imagen: '/images/grisnery.png',
     cmp: 'CMP 49647',

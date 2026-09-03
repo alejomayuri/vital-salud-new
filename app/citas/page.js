@@ -6,7 +6,7 @@ import { ArrowLeft, Calendar, Shield, Clock, User, FileText, CheckCircle2 } from
 const DOCTORES = [
   { id: 'carla-garcia', nombre: 'Dra. Carla Pierina Garcia Torres' },
   { id: 'fernando-sanchez', nombre: 'Dr. Fernando José Sanchez Sevillano' },
-  { id: 'grisnery-manquera', nombre: 'Dra. Grisnery Guadalupe Manquera Torres' },
+  { id: 'grisnery-manquera', nombre: 'Dra. Grisnery Guadalupe Maquera Torres' },
   { id: 'luis-alvarez', nombre: 'Dr. Luis Miguel Alvarez Barreda' },
   { id: 'magaly-suarez', nombre: 'Dra. Magaly Mirtha Suarez Acevedo' },
   { id: 'maria-hinojosa', nombre: 'Dra. María Fernanda Hinojosa Ugarte' },
