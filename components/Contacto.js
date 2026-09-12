@@ -50,7 +50,7 @@ export default function Contacto() {
                 </div>
                 <div>
                   <p className="text-xs text-emerald-100/70 font-semibold uppercase tracking-wider">Escríbenos</p>
-                  <p className="text-base font-bold text-white">vitalsaludcenter2025@gmail.com</p>
+                  <p className="text-base font-bold text-white">admin@vitalsaludcenter.com</p>
                 </div>
               </div>
 

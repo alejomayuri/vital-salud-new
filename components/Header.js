@@ -134,7 +134,7 @@ export default function Header() {
 
               {/* SECCIÓN DE REDES SOCIALES */}
               <div className="flex items-center justify-center gap-6 pt-5 border-t border-slate-100">
-                <a href="mailto:vitalsaludcenter2025@gmail.com" className="text-[#434bb2] hover:opacity-80 transition-opacity p-2 flex items-center justify-center" aria-label="Email">
+                <a href="mailto:admin@vitalsaludcenter.com" className="text-[#434bb2] hover:opacity-80 transition-opacity p-2 flex items-center justify-center" aria-label="Email">
                   <Mail className="h-6 w-6 stroke-[2.5]" />
                 </a>
                 <a href="https://wa.me/15550199234" target="_blank" rel="noopener noreferrer" className="text-[#434bb2] hover:text-[#7aaf43] transition-colors p-2" aria-label="WhatsApp">
