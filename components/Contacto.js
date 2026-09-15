@@ -1,7 +1,12 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import { Phone, Mail, MapPin } from 'lucide-react';
 
 export default function Contacto() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [resultMessage, setResultMessage] = useState(null);
+
   const services = [
     { id: 1, name: "Laboratorio de Patología" },
     { id: 2, name: "Biopsias" },
@@ -17,6 +22,47 @@ export default function Contacto() {
     { id: 12, name: "Oncología" },
     { id: 13, name: "Vitaminas y Suplementación" },
   ];
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setIsSubmitting(true);
+    setResultMessage(null);
+
+    const formData = new FormData(event.target);
+    // Llave de Web3Forms pasándole tu access_key
+    formData.append("access_key", "3ae4ebc1-7c2c-4b0a-9907-8c4f95521473");
+    // Asunto personalizado para el correo entrante
+    formData.append("subject", "Nuevo mensaje desde la Web - VitalSalud Center");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setResultMessage({
+          type: 'success',
+          text: '¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.'
+        });
+        event.target.reset(); // Limpia los inputs del formulario
+      } else {
+        setResultMessage({
+          type: 'error',
+          text: data.message || 'Ocurrió un problema al enviar el formulario. Inténtalo de nuevo.'
+        });
+      }
+    } catch (error) {
+      setResultMessage({
+        type: 'error',
+        text: 'Hubo un error de conexión. Inténtalo más tarde.'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <section id="contacto" className="lg:py-24 py-8 bg-white">
@@ -87,12 +133,28 @@ export default function Contacto() {
 
           {/* Formulario (Derecha) */}
           <div className="lg:col-span-7 p-8 sm:p-12 bg-slate-900 text-white flex flex-col justify-center">
-            <form className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              
+              {/* Notificación de resultado (Éxito / Error) */}
+              {resultMessage && (
+                <div 
+                  className={`p-4 rounded-xl text-sm font-medium ${
+                    resultMessage.type === 'success' 
+                      ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30' 
+                      : 'bg-red-500/20 text-red-300 border border-red-500/30'
+                  }`}
+                >
+                  {resultMessage.text}
+                </div>
+              )}
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Nombre completo</label>
                   <input 
                     type="text" 
+                    name="nombre"
+                    required
                     placeholder="Ej. Juan Pérez" 
                     className="w-full bg-slate-800/80 border border-slate-700/60 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-[#434bb2] focus:ring-1 focus:ring-[#434bb2] transition-all text-sm" 
                   />
@@ -101,6 +163,8 @@ export default function Contacto() {
                   <label className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Correo electrónico</label>
                   <input 
                     type="email" 
+                    name="email"
+                    required
                     placeholder="juan@correo.com" 
                     className="w-full bg-slate-800/80 border border-slate-700/60 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-[#434bb2] focus:ring-1 focus:ring-[#434bb2] transition-all text-sm" 
                   />
@@ -112,7 +176,9 @@ export default function Contacto() {
                   <label className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Teléfono</label>
                   <input 
                     type="tel" 
-                    placeholder="+1 555 000 000" 
+                    name="telefono"
+                    required
+                    placeholder="+51 957 045 728" 
                     className="w-full bg-slate-800/80 border border-slate-700/60 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-[#434bb2] focus:ring-1 focus:ring-[#434bb2] transition-all text-sm" 
                   />
                 </div>
@@ -120,9 +186,12 @@ export default function Contacto() {
                   <label className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Especialidad de interés</label>
                   <div className="relative">
                     <select 
+                      name="especialidad"
+                      defaultValue=""
+                      required
                       className="w-full bg-slate-800/80 border border-slate-700/60 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-[#434bb2] focus:ring-1 focus:ring-[#434bb2] transition-all text-sm appearance-none cursor-pointer"
                     >
-                      <option className="bg-slate-800 text-slate-500">Seleccionar servicio</option>
+                      <option value="" disabled className="bg-slate-800 text-slate-500">Seleccionar servicio</option>
                       {services.map((service) => (
                         <option key={service.id} value={service.name} className="bg-slate-800 text-white">
                           {service.name}
@@ -141,6 +210,8 @@ export default function Contacto() {
               <div className="space-y-2">
                 <label className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Mensaje o motivo de consulta</label>
                 <textarea 
+                  name="mensaje"
+                  required
                   rows={4} 
                   placeholder="Cuéntanos brevemente cómo podemos ayudarte..." 
                   className="w-full bg-slate-800/80 border border-slate-700/60 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-[#434bb2] focus:ring-1 focus:ring-[#434bb2] transition-all text-sm resize-none"
@@ -149,9 +220,10 @@ export default function Contacto() {
 
               <button 
                 type="submit" 
-                className="w-full bg-[#434bb2] hover:bg-[#363c91] text-white font-bold py-4 rounded-xl transition-colors shadow-lg shadow-[#434bb2]/20 text-sm tracking-wide uppercase"
+                disabled={isSubmitting}
+                className="w-full bg-[#434bb2] hover:bg-[#363c91] text-white font-bold py-4 rounded-xl transition-colors shadow-lg shadow-[#434bb2]/20 text-sm tracking-wide uppercase disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Enviar Mensaje
+                {isSubmitting ? 'Enviando...' : 'Enviar Mensaje'}
               </button>
             </form>
           </div>
