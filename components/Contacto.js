@@ -30,7 +30,7 @@ export default function Contacto() {
 
     const formData = new FormData(event.target);
     // Llave de Web3Forms pasándole tu access_key
-    formData.append("access_key", "3ae4ebc1-7c2c-4b0a-9907-8c4f95521473");
+    formData.append("access_key", "bad0d411-1fce-4337-8c37-c1bf027427cd");
     // Asunto personalizado para el correo entrante
     formData.append("subject", "Nuevo mensaje desde la Web - VitalSalud Center");
 
