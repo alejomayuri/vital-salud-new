@@ -1,4 +1,6 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { ArrowLeft, Calendar, Shield, Clock, User, FileText, CheckCircle2 } from 'lucide-react';
 
@@ -30,11 +32,53 @@ const SERVICIOS = [
   { id: 'vitaminas-y-suplementacion', nombre: 'Vitaminas y Suplementación' },
 ];
 
-export default async function PaginaCitasExtendida({ searchParams }) {
-  // Capturamos los parámetros de la URL de forma asíncrona (Next.js App Router)
-  const resolvedSearchParams = await searchParams;
-  const preselectedDr = resolvedSearchParams.dr || '';
-  const preselectedServicio = resolvedSearchParams.servicio || '';
+export default function PaginaCitasExtendida({ searchParams }) {
+  // Manejo de parámetros recibidos (soporta objeto síncrono o promesa de Next.js App Router)
+  const resolvedSearchParams = React.use(searchParams instanceof Promise ? searchParams : Promise.resolve(searchParams || {}));
+  const preselectedDr = resolvedSearchParams?.dr || '';
+  const preselectedServicio = resolvedSearchParams?.servicio || '';
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [resultMessage, setResultMessage] = useState(null);
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setIsSubmitting(true);
+    setResultMessage(null);
+
+    const formData = new FormData(event.target);
+    formData.append("access_key", "659909bd-6a4e-43f1-acf2-c127f9671998");
+    formData.append("subject", "Nueva Solicitud de Cita Médica - VitalSalud Center");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setResultMessage({
+          type: 'success',
+          text: '¡Solicitud registrada con éxito! Nos pondremos en contacto a la brevedad.'
+        });
+        event.target.reset();
+      } else {
+        setResultMessage({
+          type: 'error',
+          text: data.message || 'Ocurrió un error al enviar el formulario.'
+        });
+      }
+    } catch (error) {
+      setResultMessage({
+        type: 'error',
+        text: 'Error de conexión. Inténtalo de nuevo.'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-slate-50 antialiased py-12">
@@ -62,8 +106,20 @@ export default async function PaginaCitasExtendida({ searchParams }) {
         </div>
 
         {/* Formulario Extendido */}
-        <form className="space-y-8 bg-white p-8 rounded-b-3xl shadow-sm border-x border-b border-slate-100 text-slate-800">
+        <form onSubmit={handleSubmit} className="space-y-8 bg-white p-8 rounded-b-3xl shadow-sm border-x border-b border-slate-100 text-slate-800">
           
+          {resultMessage && (
+            <div 
+              className={`p-4 rounded-xl text-sm font-medium ${
+                resultMessage.type === 'success' 
+                  ? 'bg-emerald-500/10 text-emerald-800 border border-emerald-500/20' 
+                  : 'bg-red-500/10 text-red-800 border border-red-500/20'
+              }`}
+            >
+              {resultMessage.text}
+            </div>
+          )}
+
           {/* BLOQUE 1: Información de Triaje y Derivación Automática */}
           <div className="space-y-4">
             <h3 className="text-base font-bold text-[#434bb2] uppercase tracking-wider flex items-center gap-2 border-b border-slate-100 pb-2">
@@ -74,8 +130,10 @@ export default async function PaginaCitasExtendida({ searchParams }) {
               <div className="space-y-2">
                 <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Servicio o Especialidad</label>
                 <select 
+                  name="servicio"
                   defaultValue={preselectedServicio}
                   className="w-full bg-slate-50 border border-[#434bb2] rounded-xl px-4 py-3 text-sm text-slate-800 focus:outline-none focus:border-[#434bb2] focus:ring-1 focus:ring-[#434bb2] transition-all cursor-pointer"
+                  required
                 >
                   <option value="">-- Seleccionar Especialidad --</option>
                   {SERVICIOS.map((s) => (
@@ -87,6 +145,7 @@ export default async function PaginaCitasExtendida({ searchParams }) {
               <div className="space-y-2">
                 <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Médico Especialista (Opcional)</label>
                 <select 
+                  name="doctor"
                   defaultValue={preselectedDr}
                   className="w-full bg-slate-50 border border-[#434bb2] rounded-xl px-4 py-3 text-sm text-slate-800 focus:outline-none focus:border-[#434bb2] focus:ring-1 focus:ring-[#434bb2] transition-all cursor-pointer"
                 >
@@ -108,18 +167,18 @@ export default async function PaginaCitasExtendida({ searchParams }) {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               <div className="space-y-2 sm:col-span-2">
                 <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Nombres y Apellidos Completos</label>
-                <input type="text" placeholder="Ej. Carlos Mendoza Ramos" className="w-full bg-slate-50 border border-[#434bb2] rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#434bb2] transition-all" required />
+                <input type="text" name="nombre_completo" placeholder="Ej. Carlos Mendoza Ramos" className="w-full bg-slate-50 border border-[#434bb2] rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#434bb2] transition-all" required />
               </div>
               
               <div className="space-y-2">
                 <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Tipo de Documento / Nro</label>
                 <div className="flex gap-2">
-                  <select className="bg-slate-50 border border-[#434bb2] rounded-xl px-2 py-3 text-xs focus:outline-none focus:border-[#434bb2]">
-                    <option>DNI</option>
-                    <option>CE</option>
-                    <option>PAS</option>
+                  <select name="tipo_documento" className="bg-slate-50 border border-[#434bb2] rounded-xl px-2 py-3 text-xs focus:outline-none focus:border-[#434bb2]">
+                    <option value="DNI">DNI</option>
+                    <option value="CE">CE</option>
+                    <option value="PAS">PAS</option>
                   </select>
-                  <input type="text" placeholder="12345678" className="w-full bg-slate-50 border border-[#434bb2] rounded-xl px-3 py-3 text-sm focus:outline-none focus:border-[#434bb2] transition-all" required />
+                  <input type="text" name="numero_documento" placeholder="12345678" className="w-full bg-slate-50 border border-[#434bb2] rounded-xl px-3 py-3 text-sm focus:outline-none focus:border-[#434bb2] transition-all" required />
                 </div>
               </div>
             </div>
@@ -127,17 +186,17 @@ export default async function PaginaCitasExtendida({ searchParams }) {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               <div className="space-y-2">
                 <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Fecha de Nacimiento</label>
-                <input type="date" className="w-full bg-slate-50 border border-[#434bb2] rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#434bb2] text-slate-600" required />
+                <input type="date" name="fecha_nacimiento" className="w-full bg-slate-50 border border-[#434bb2] rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#434bb2] text-slate-600" required />
               </div>
 
               <div className="space-y-2">
                 <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Número de Celular</label>
-                <input type="tel" placeholder="999 999 999" className="w-full bg-slate-50 border border-[#434bb2] rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#434bb2] transition-all" required />
+                <input type="tel" name="telefono" placeholder="999 999 999" className="w-full bg-slate-50 border border-[#434bb2] rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#434bb2] transition-all" required />
               </div>
 
               <div className="space-y-2">
                 <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Correo Electrónico</label>
-                <input type="email" placeholder="paciente@correo.com" className="w-full bg-slate-50 border border-[#434bb2] rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#434bb2] transition-all" required />
+                <input type="email" name="email" placeholder="paciente@correo.com" className="w-full bg-slate-50 border border-[#434bb2] rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#434bb2] transition-all" required />
               </div>
             </div>
           </div>
@@ -151,10 +210,10 @@ export default async function PaginaCitasExtendida({ searchParams }) {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Tipo de Financiamiento</label>
-                <select className="w-full bg-slate-50 border border-[#434bb2] rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#434bb2] cursor-pointer">
-                  <option>Particular / Autopago</option>
-                  <option>Seguro EPS (Rimac, Pacífico, Mapfre)</option>
-                  <option>Convenio Institucional / Corporativo</option>
+                <select name="tipo_financiamiento" className="w-full bg-slate-50 border border-[#434bb2] rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#434bb2] cursor-pointer">
+                  <option value="Particular / Autopago">Particular / Autopago</option>
+                  <option value="Seguro EPS (Rimac, Pacífico, Mapfre)">Seguro EPS (Rimac, Pacífico, Mapfre)</option>
+                  <option value="Convenio Institucional / Corporativo">Convenio Institucional / Corporativo</option>
                 </select>
               </div>
 
@@ -162,11 +221,11 @@ export default async function PaginaCitasExtendida({ searchParams }) {
                 <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Modalidad de Consulta</label>
                 <div className="grid grid-cols-2 gap-4 pt-1">
                   <label className="flex items-center gap-2 p-3 bg-slate-50 border border-[#434bb2] rounded-xl text-xs sm:text-sm font-medium cursor-pointer hover:border-[#434bb2] transition-colors">
-                    <input type="radio" name="modalidad" defaultChecked className="text-[#434bb2] focus:ring-[#434bb2]" />
+                    <input type="radio" name="modalidad" value="Presencial" defaultChecked className="text-[#434bb2] focus:ring-[#434bb2]" />
                     Presencial
                   </label>
                   <label className="flex items-center gap-2 p-3 bg-slate-50 border border-[#434bb2] rounded-xl text-xs sm:text-sm font-medium cursor-pointer hover:border-[#434bb2] transition-colors">
-                    <input type="radio" name="modalidad" className="text-[#434bb2] focus:ring-[#434bb2]" />
+                    <input type="radio" name="modalidad" value="Telemedicina" className="text-[#434bb2] focus:ring-[#434bb2]" />
                     Telemedicina
                   </label>
                 </div>
@@ -182,7 +241,7 @@ export default async function PaginaCitasExtendida({ searchParams }) {
             
             <div className="space-y-2">
               <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Sintomatología o motivo detallado de la solicitud</label>
-              <textarea rows={4} placeholder="Escriba brevemente los síntomas principales o el motivo del examen solicitado..." className="w-full bg-slate-50 border border-[#434bb2] rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#434bb2] resize-none transition-all"></textarea>
+              <textarea name="motivo_consulta" rows={4} placeholder="Escriba brevemente los síntomas principales o el motivo del examen solicitado..." className="w-full bg-slate-50 border border-[#434bb2] rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#434bb2] resize-none transition-all"></textarea>
             </div>
           </div>
 
@@ -190,9 +249,10 @@ export default async function PaginaCitasExtendida({ searchParams }) {
           <div className="pt-4">
             <button 
               type="submit" 
-              className="w-full bg-[#7aaf43] hover:bg-[#6c9b3a] text-white font-bold py-4 rounded-xl transition-all shadow-lg shadow-[#7aaf43]/20 text-sm tracking-wide uppercase flex items-center justify-center gap-2"
+              disabled={isSubmitting}
+              className="w-full bg-[#7aaf43] hover:bg-[#6c9b3a] text-white font-bold py-4 rounded-xl transition-all shadow-lg shadow-[#7aaf43]/20 text-sm tracking-wide uppercase flex items-center justify-center gap-2 disabled:opacity-50"
             >
-              <CheckCircle2 className="h-4 w-4" /> Registrar Solicitud de Cita Médica
+              <CheckCircle2 className="h-4 w-4" /> {isSubmitting ? 'Enviando...' : 'Registrar Solicitud de Cita Médica'}
             </button>
             <p className="text-center text-[11px] text-slate-400 mt-3">
               Al enviar este formulario, su solicitud entra en cola de triaje digital. Un asesor se comunicará en un lapso máximo de 15 minutos para confirmar fecha y hora definitiva.
